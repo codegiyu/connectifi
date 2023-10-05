@@ -12,6 +12,9 @@ export default {
         "grey-d9": "#D9D9D9",
         "dark-19": "#191919",
         "bright-blue": "#049BFF"
+      },
+      backgroundImage: {
+        homeHero: "linear-gradient(180deg, rgba(0, 113, 188, 0.01) 0%, rgba(166, 213, 243, 0.09) 100%)"
       }
     },
   },
