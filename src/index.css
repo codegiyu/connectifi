@@ -4,6 +4,59 @@
 @tailwind components;
 @tailwind utilities;
 
-.p-container {
-  @apply px-4 md:px-12 lg:px-16 xl:px-[6.25rem];
+@layer components {
+
+  /* Layout */
+  .p-container {
+    @apply px-4 md:px-12 lg:px-16 xl:px-[6.25rem] 2xl:px-40;
+  }
+
+  /* Typography */
+  .heading-1-bold {
+    @apply text-[4rem] leading-[4.75rem] font-bold;
+  }
+
+  .heading-1-medium {
+    @apply text-[4rem] leading-[4.75rem] font-medium;
+  }
+
+  .heading-2 {
+    @apply text-[3rem] leading-[3.625rem] font-medium;
+  }
+
+  .heading-2-bold {
+    @apply text-[3rem] leading-[3.625rem] font-bold;
+  }
+
+  .heading-3 {
+    @apply text-[2rem] leading-[2.375rem] font-bold;
+  }
+
+  .heading-4 {
+    @apply text-[2.625rem] leading-[3rem] font-bold;
+  }
+
+  .body-text-1 {
+    @apply text-2xl leading-[1.875rem] font-bold;
+  }
+
+  .body-text-2 {
+    @apply text-2xl leading-[1.875rem] font-medium;
+  }
+
+  .body-text-3 {
+    @apply text-2xl leading-[1.875rem];
+  }
+
+  .body-text-4 {
+    @apply text-xl leading-6 font-medium;
+  }
+
+  .body-text-5 {
+    @apply text-xl leading-6;
+  }
+
+  .body-text-6 {
+    @apply text-base leading-5;
+  }
 }

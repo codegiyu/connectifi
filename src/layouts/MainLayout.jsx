@@ -8,7 +8,7 @@ const MainLayout = ({ hasWhiteHeader = false, hasHeader = true, children }) => {
     return (
         <div>
             {!hasHeader ? null : hasWhiteHeader ? <WhiteHeader /> : <BlueHeader />}
-            <main className='w-full p-container'>
+            <main className='w-full'>
                 {children}
             </main>
             <Footer />
