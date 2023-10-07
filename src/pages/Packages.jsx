@@ -14,7 +14,12 @@ const PackagesPage = () => (
                 text={packages.text}
                 heroImg={packages.heroImg}
             ></Hero>
-            <TextPictureLeft image={cashback.image} heading={cashback.heading} text={cashback.text} btnText={cashback.btnText} />
+            <TextPictureLeft
+                image={cashback.image}
+                heading={cashback.heading}
+                text={cashback.text}
+                btnText={cashback.btnText}
+            />
         </>
     </MainLayout>
 )
