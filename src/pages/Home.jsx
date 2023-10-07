@@ -6,7 +6,7 @@ import TextPictureLeft from "../sections/TextPictureLeft";
 import TextPictureRight from "../sections/TextPictureRight";
 import Nationwide from "../sections/HomePage/Nationwide";
 import Reviews from "../sections/HomePage/Reviews";
-import Cta from "../sections/HomePage/CTA";
+import Cta from "../sections/HomePage/Cta";
 
 const HomePage = () => {
 
