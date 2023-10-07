@@ -8,7 +8,7 @@
 
   /* Layout */
   .p-container {
-    @apply px-4 md:px-12 lg:px-16 xl:px-[6.25rem] 2xl:px-40;
+    @apply px-4 sm:px-12 lg:px-16 xl:px-[6.25rem] 2xl:px-40;
   }
 
   /* Typography */
