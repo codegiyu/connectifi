@@ -9,17 +9,15 @@ const RoundedButton = ({
     ...props
 }) => {
 
-    const stylesObj = Object.assign({ background: '#049BFF', borderRadius: '30px', padding: '16px 30px' }, styles);
-    const textStylesObj = Object.assign({ fontSize: "20px", color: "#fff", lineHeight: "100%", fontWeight: "600" }, textStyles)
-
     return (
         <button
             type={type}
             onClick={clickHandler}
-            style={stylesObj}
+            className='bg-bright-blue px-[1.875rem] py-4 rounded-[1.875rem]'
+            style={styles}
             {...props}
         >
-            <span style={textStylesObj}>
+            <span className='text-base md:text-xl leading-4 md:leading-5 lg:font-semibold text-white' style={textStyles}>
                 {text}
             </span>
         </button>
