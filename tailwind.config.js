@@ -15,6 +15,9 @@ export default {
       },
       backgroundImage: {
         homeHero: "linear-gradient(180deg, rgba(0, 113, 188, 0.01) 0%, rgba(166, 213, 243, 0.09) 100%)"
+      },
+      boxShadow: {
+        reviewBox: "0px 4px 15px 0px rgba(0, 113, 188, 0.17)"
       }
     },
   },
