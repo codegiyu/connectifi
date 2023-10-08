@@ -2,6 +2,7 @@ import WhiteHeader from "./WhiteHeader";
 import heroData from "../data/heroData";
 import RoundedButton from "../components/RoundedButton";
 import StatsSnippetGroup from "../components/StatsSnippetGroup";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const { home } = heroData;
 
@@ -29,7 +30,15 @@ const HomeHero = () => (
                     </div>
                 </div>
                 <div className="flex justify-center lg:justify-end">
-                    <img src={home.heroImg} alt="" className="lg:translate-x-[3.625rem]" />
+                    <LazyLoadImage
+                        src={home.heroImg.src}
+                        height={home.heroImg.height}
+                        width={home.heroImg.width}
+                        visibleByDefault={true}
+                        className="lg:translate-x-[3.625rem]"
+                        alt=""
+                    />
+                    {/* <img src={home.heroImg} alt="" className="lg:translate-x-[3.625rem]" /> */}
                 </div>
             </section>
         </section>

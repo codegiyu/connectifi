@@ -17,7 +17,7 @@ const Footer = () => {
                                 <span className="font-bold text-2xl leading-6">Connectifi</span>
                             </div>
                         </Link>
-                        <p className="text-xl text-grey-d9 font-normal max-w-[710px]">
+                        <p className="body-text-6 md:body-text-5 text-grey-d9 font-normal max-w-[710px]">
                             Connect with Confidence, Powered by Connectifi - Your Trusted Source for Data Insights and Connectivity Solutions.
                         </p>
                         <SocialMediaIconsGroup arr={socialMediaIconsData} />
@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
             </section>
             <section className="w-full bg-white p-container pt-6 pb-9 text-center">
-                <span className="w-max mx-auto text-xl leading-5 text-[#333] font-medium">
+                <span className="w-max mx-auto body-text-6 md:body-text-5 leading-5 text-[#333] font-medium">
                     &copy; 2023 Connectifi. All rights reserved.
                 </span>
             </section>

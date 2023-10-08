@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Hero = ({ heading, boldHeading = true, text, heroImg, bothHalvesCentered = true, children, sideIcon = null }) => {
 
@@ -15,11 +16,29 @@ const Hero = ({ heading, boldHeading = true, text, heroImg, bothHalvesCentered =
                     {children}
                 </div>
                 <div className="flex justify-center lg:justify-end">
-                    <img src={heroImg} alt="" className="" />
+                    <LazyLoadImage
+                        src={heroImg.src}
+                        height={heroImg.height}
+                        width={heroImg.width}
+                        visibleByDefault={true}
+                        className=""
+                        alt=""
+                    />
+                    {/* <img src={heroImg} alt="" className="" /> */}
                 </div>
             </section>
             {sideIcon ? (
-                <img src={sideIcon} alt="" className="z-[1] relative mt-[-80px]" />
+                <div className="">
+                    <LazyLoadImage
+                        src={sideIcon.src}
+                        height={sideIcon.height}
+                        width={sideIcon.width}
+                        visibleByDefault={true}
+                        className="z-[1] relative mt-[-80px]"
+                        alt=""
+                    />
+                    {/* <img src={sideIcon} alt="" className="z-[1] relative mt-[-80px]" /> */}
+                </div>
             ) : null
             }
         </section>
