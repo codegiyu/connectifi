@@ -8,23 +8,23 @@ import GoToTop from "../hooks/GoToTop";
 const { contact } = heroData;
 
 const ContactUsPage = () => (
-    <MainLayout>
-        <>
-            <Hero
-                heading={contact.heading}
-                text={contact.text}
-                heroImg={contact.heroImg}
-            >
-                <div className="mt-16">
-                    <SocialMediaIconsGroup arr={socialMediaIconsData} />
-                </div>
-            </Hero>
-            <section className="py-10">
-                Contact Us Page
-            </section>
-            <GoToTop />
-        </>
-    </MainLayout>
-)
+  <MainLayout>
+    <>
+      <Hero
+        heading={contact.heading}
+        text={contact.text}
+        heroImg={contact.heroImg}
+      >
+        <div className="mt-16">
+          <SocialMediaIconsGroup arr={socialMediaIconsData} />
+        </div>
+      </Hero>
+      <section className="py-10">
+        
+      </section>
+      <GoToTop />
+    </>
+  </MainLayout>
+);
 
-export default ContactUsPage
+export default ContactUsPage;
