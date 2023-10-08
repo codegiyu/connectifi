@@ -1,10 +1,12 @@
 import MainLayout from "../layouts/MainLayout";
 import privacyPolicyData from "../data/privacyPolicyData";
 import PolicyNumberGroup from "../components/PolicyNumberGroup";
+import GoToTop from "../hooks/GoToTop";
 
 const PrivacyPolicyPage = () => (
     <MainLayout hasWhiteHeader={true}>
         <>
+            <GoToTop />
             <section className="w-full pt-[6.25rem] pb-8 p-container grid gap-10">
                 <h1 className="heading-3 md:heading-2-bold text-dark-19 text-center">
                     Privacy Policy

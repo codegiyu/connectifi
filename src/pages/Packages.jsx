@@ -3,12 +3,14 @@ import Hero from "../components/Hero";
 import heroData from "../data/heroData";
 import { cashback } from "../data/packagesData";
 import TextPictureLeft from "../sections/TextPictureLeft";
+import GoToTop from "../hooks/GoToTop";
 
 const { packages } = heroData;
 
 const PackagesPage = () => (
     <MainLayout>
         <>
+            <GoToTop />
             <Hero
                 heading={packages.heading}
                 text={packages.text}

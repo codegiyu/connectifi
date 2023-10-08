@@ -30,7 +30,7 @@ const WhiteHeader = () => {
                             </NavLink>
                         </li>
                         <li className='w-max'>
-                            <NavLink to="/products" className={navLinkClasses}>
+                            <NavLink to="/products-and-services" className={navLinkClasses}>
                                 Products & Services
                             </NavLink>
                         </li>

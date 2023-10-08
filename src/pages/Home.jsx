@@ -7,12 +7,14 @@ import TextPictureRight from "../sections/TextPictureRight";
 import Nationwide from "../sections/HomePage/Nationwide";
 import Reviews from "../sections/HomePage/Reviews";
 import Cta from "../sections/HomePage/Cta";
+import GoToTop from "../hooks/GoToTop";
 
 const HomePage = () => {
 
     return (
         <MainLayout hasHeader={false}>
             <>
+                <GoToTop />
                 <HomeHero />
                 <Clients />
                 <section>
