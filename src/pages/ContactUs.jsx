@@ -14,6 +14,8 @@ const ContactUsPage = () => (
                 heading={contact.heading}
                 text={contact.text}
                 heroImg={contact.heroImg}
+                headingWidth={contact.headingWidth}
+                textWidth={contact.textWidth}
             >
                 <div className="mt-16">
                     <SocialMediaIconsGroup arr={socialMediaIconsData} />

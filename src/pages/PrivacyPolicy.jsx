@@ -7,7 +7,7 @@ const PrivacyPolicyPage = () => (
     <MainLayout hasWhiteHeader={true}>
         <>
             <GoToTop />
-            <section className="w-full pt-[6.25rem] pb-8 p-container grid gap-10">
+            <section className="pt-[6.25rem] pb-8 p-container grid gap-10">
                 <h1 className="heading-3 md:heading-2-bold text-dark-19 text-center">
                     Privacy Policy
                 </h1>
@@ -17,7 +17,7 @@ const PrivacyPolicyPage = () => (
                     practices concerning the collection, use, and protection of your data when you use our services.`}
                 </p>
             </section>
-            <section className="w-full p-container grid gap-[3.125rem] pb-[150px]">
+            <section className="p-container grid gap-[3.125rem] pb-[150px]">
                 {privacyPolicyData.map((item, idx) => (
                     <PolicyNumberGroup
                         key={`pnumgrp-${idx}`}

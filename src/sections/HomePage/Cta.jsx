@@ -1,7 +1,7 @@
 import RoundedButton from "../../components/RoundedButton";
 
 const Cta = () => (
-    <section className="w-full p-container py-32">
+    <section className="p-container py-32">
         <section className="w-full bg-pri-blue rounded-[20px] py-[45px] px-8 md:px-[45px]">
             <div className="flex flex-col md:flex-row gap-12 justify-between">
                 <div className="w-full md:w-[400px] lg:w-[480px] grid gap-4 text-white">

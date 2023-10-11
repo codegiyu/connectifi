@@ -4,7 +4,7 @@ import GoToTop from "../hooks/GoToTop"
 const NoPage = () => {
 
     return (
-        <div className="h-screen w-full grid place-items-center">
+        <div className="h-screen p-container grid place-items-center">
             <GoToTop />
             <p className="text-center text-2xl">
                 Sorry, this page does not exist. You can return to <Link to="/" className="font-bold underline text-blue-600">Home</Link>

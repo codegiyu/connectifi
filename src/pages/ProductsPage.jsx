@@ -2,6 +2,12 @@ import MainLayout from "../layouts/MainLayout";
 import Hero from "../components/Hero";
 import heroData from "../data/heroData";
 import GoToTop from "../hooks/GoToTop";
+import Searchbar from "../sections/Products/Searchbar";
+import BestDeals from "../sections/Products/BestDeals";
+import FeaturedProducts from "../sections/Products/Featured Products";
+import DealOfTheDay from "../sections/Products/DealOfTheDay";
+import Services from "../sections/Products/Services";
+import TopDeals from "../sections/Products/TopDeals";
 
 const { products } = heroData;
 
@@ -13,12 +19,17 @@ const ProductsPage = () => (
                 heading={products.heading}
                 text={products.text}
                 heroImg={products.heroImg}
-                // bothHalvesCentered={false}
+                bothHalvesCentered={false}
                 sideIcon={products.sideIcon}
+                headingWidth={products.headingWidth}
+                textWidth={products.textWidth}
             ></Hero>
-            <section className="py-10">
-                Products and Services Page
-            </section>
+            <Searchbar />
+            <BestDeals />
+            <DealOfTheDay />
+            <FeaturedProducts />
+            <TopDeals />
+            <Services />
         </>
     </MainLayout>
 )
