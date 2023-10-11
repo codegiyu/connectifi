@@ -13,7 +13,7 @@ const RoundedButton = ({
         <button
             type={type}
             onClick={clickHandler}
-            className='bg-bright-blue px-[1.875rem] py-4 rounded-[1.875rem]'
+            className='bg-bright-blue px-4 md:px-[1.875rem] py-[0.625rem] md:py-4 rounded-[1.875rem]'
             style={styles}
             {...props}
         >

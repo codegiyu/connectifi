@@ -4,25 +4,25 @@ import { topDeals } from "../../data/productsData";
 import TopDealCard from "../../components/TopDealCard";
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
 
 const TopDeals = () => {
 
     return (
-        <section className="w-full py-[6.25rem] bg-white">
+        <section className="w-full mb-[6.25rem] bg-white">
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={'auto'}
                 loop={true}
-                autoplay={{ delay: 5000, disableOnInteraction: true }}
+                // autoplay={{ delay: 5, disableOnInteraction: true }}
                 mousewheel={true}
+                spaceBetween={20}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
                     depth: 0,
-                    scale: 0.85,
+                    scale: 1,
                     modifier: 1,
                     slideShadows: false,
                 }}

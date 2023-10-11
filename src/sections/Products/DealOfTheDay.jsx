@@ -42,7 +42,7 @@ const DealOfTheDay = () => {
                 <TitleWithBtn heading="Deal Of The Day" />
                 <div className="w-full rounded-[40px] bg-pri-blue grid lg:grid-cols-2 items-center px-4 lg:px-[45px]">
                     <div className="w-full h-fit my-10 lg:my-5 grid gap-8">
-                        <div className="w-full flex items-center gap-[10px]">
+                        <div className="w-full flex items-center justify-center lg:justify-start gap-[10px]">
                             <span className="text-white body-text-6-medium md:body-text-4">Time Left:</span>
                             <TimeBoxGroup
                                 hour={String(timeLeft.hour).padStart(2, "0")}
@@ -50,7 +50,7 @@ const DealOfTheDay = () => {
                                 sec={String(timeLeft.sec).padStart(2, "0")}
                             />
                         </div>
-                        <div className="w-full flex gap-[10px] items-center text-white font-medium">
+                        <div className="w-full flex gap-[10px] justify-center lg:justify-start items-center text-white font-medium">
                             <span className="body-text-1 md:heading-3-medium">
                                 AlwaysOn + Router
                             </span>
@@ -58,7 +58,7 @@ const DealOfTheDay = () => {
                                 + Free Installation
                             </span>
                         </div>
-                        <div className="w-full flex items-center gap-[10px]">
+                        <div className="w-[90%] lg:w-fit mx-auto lg:mx-0 flex items-center gap-[10px]">
                             <div className="bg-white py-[15px] px-[14px] rounded-[10px] flex-none">
                                 <img src={cubes} alt="" className="w-5 h-5 md:w-6 md:h-6" />
                             </div>
