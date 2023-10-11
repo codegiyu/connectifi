@@ -4,6 +4,8 @@ import heroData from "../data/heroData";
 import { cashback } from "../data/packagesData";
 import TextPictureLeft from "../sections/TextPictureLeft";
 import GoToTop from "../hooks/GoToTop";
+import DataBundles from "../sections/Packages/DataBundles";
+import ComparePackages from "../sections/Packages/ComparePackages";
 
 const { packages } = heroData;
 
@@ -18,6 +20,8 @@ const PackagesPage = () => (
                 headingWidth={packages.headingWidth}
                 textWidth={packages.textWidth}
             ></Hero>
+            <DataBundles />
+            <ComparePackages />
             <TextPictureLeft
                 image={cashback.image}
                 heading={cashback.heading}

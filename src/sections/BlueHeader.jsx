@@ -17,6 +17,10 @@ const BlueHeader = () => {
         return `${isActive ? "font-bold text-white" : "text-grey-d9"} text-xl leading-[100%] hover:text-white`
     }
 
+    const navLinkClassesMob = ({ isActive }) => {
+        return `${isActive ? "font-bold text-pri-blue" : "text-dark-19 lg:text-grey-89"} text-sm md:text-xl leading-[18px] md:leading-[100%] hover:text-pri-blue w-full p-[10px]`
+    }
+
     useEffect(() => {
         menuIsOpen ? blockScroll() : allowScroll();
 
@@ -71,17 +75,17 @@ const BlueHeader = () => {
                                 <nav className='w-full'>
                                     <ul className='w-full grid list-none'>
                                         <li className='w-full py-[0.625rem] pl-2 pr-1 border-b-[0.5px] border-[#AEAEAE]'>
-                                            <NavLink to="/" className={navLinkClasses + "w-full p-[10px]"}>
+                                            <NavLink to="/" className={navLinkClassesMob}>
                                                 Home
                                             </NavLink>
                                         </li>
                                         <li className='w-full py-[0.625rem] pl-2 pr-1 border-b-[0.5px] border-[#AEAEAE]'>
-                                            <NavLink to="/packages" className={navLinkClasses + "w-full p-[10px]"}>
+                                            <NavLink to="/packages" className={navLinkClassesMob}>
                                                 Packages
                                             </NavLink>
                                         </li>
                                         <li className='w-full py-[0.625rem] pl-2 pr-1 border-b-[0.5px] border-[#AEAEAE]'>
-                                            <NavLink to="/products-and-services" className={navLinkClasses + "w-full p-[10px]"}>
+                                            <NavLink to="/products-and-services" className={navLinkClassesMob}>
                                                 Products & Services
                                             </NavLink>
                                         </li>
