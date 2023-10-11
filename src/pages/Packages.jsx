@@ -15,6 +15,8 @@ const PackagesPage = () => (
                 heading={packages.heading}
                 text={packages.text}
                 heroImg={packages.heroImg}
+                headingWidth={packages.headingWidth}
+                textWidth={packages.textWidth}
             ></Hero>
             <TextPictureLeft
                 image={cashback.image}

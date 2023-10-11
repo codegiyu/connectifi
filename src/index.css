@@ -8,7 +8,11 @@
 
   /* Layout */
   .p-container {
-    @apply px-4 sm:px-12 lg:px-16 xl:px-[6.25rem] 2xl:px-40;
+    @apply px-4 sm:px-12 lg:px-16 xl:px-[6.25rem] 2xl:px-40 max-w-full xl:max-w-[1380px] mx-auto;
+  }
+
+  .p-container-full {
+    @apply px-4 sm:px-12 lg:px-16 xl:px-[6.25rem] 2xl:px-40 max-w-full;
   }
 
   /* Typography */
@@ -30,6 +34,10 @@
 
   .heading-3 {
     @apply text-[2rem] leading-[2.375rem] font-bold;
+  }
+
+  .heading-3-medium {
+    @apply text-[2rem] leading-[2.375rem] font-medium;
   }
 
   .heading-4 {
@@ -58,6 +66,10 @@
 
   .body-text-6 {
     @apply text-base leading-5;
+  }
+
+  .body-text-6-medium {
+    @apply text-base leading-5 font-medium;
   }
 
   .body-text-7 {

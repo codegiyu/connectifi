@@ -4,8 +4,8 @@ import ReviewGroup from "../../components/ReviewGroup";
 const Reviews = () => {
 
     return (
-        <section className="w-full grid gap-20">
-            <div className="w-full p-container grid lg:grid-cols-2 lg:items-center gap-[1.875rem] lg:gap-36 xl:gap-[270px]">
+        <section className="p-container grid gap-20">
+            <div className="grid lg:grid-cols-2 lg:items-center gap-[1.875rem] lg:gap-36 xl:gap-[270px]">
                 <h3 className="w-full text-dark-19 heading-3 font-semibold md:heading-2 text-center lg:text-start">
                     Words From Our Valued Clients
                 </h3>
@@ -14,7 +14,7 @@ const Reviews = () => {
                 </p>
             </div>
             <div
-                className="p-container overflow-x-scroll [-ms-overflow-style:none] 
+                className="overflow-x-scroll [-ms-overflow-style:none] 
                 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             >
                 <ReviewGroup arr={reviewData} />
