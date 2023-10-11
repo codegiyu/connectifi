@@ -1,16 +1,31 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../assets/logo-red.svg";
+import menuOpen from "../assets/menu-open.svg";
+import menuClose from "../assets/menu-close.svg";
 import RoundedButton from '../components/RoundedButton';
+import { useEffect, useState } from 'react';
+import useScrollBlock from '../hooks/useScrollBlock';
 
 const WhiteHeader = () => {
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const [blockScroll, allowScroll] = useScrollBlock();
+
+    const openMenu = () => setMenuIsOpen(true);
+    const closeMenu = () => setMenuIsOpen(false);
 
     const navLinkClasses = ({ isActive }) => {
-        return `${isActive ? "font-bold text-pri-blue" : "text-grey-89"} text-xl leading-[100%] hover:text-pri-blue`
+        return `${isActive ? "font-bold text-pri-blue" : "text-dark-19 lg:text-grey-89"} text-sm md:text-xl leading-[18px] md:leading-[100%] hover:text-pri-blue`
     }
 
+    useEffect(() => {
+        menuIsOpen ? blockScroll() : allowScroll();
+
+        return () => allowScroll();
+    }, [menuIsOpen, blockScroll, allowScroll])
+
     return (
-        <header className="w-full bg-transparent py-2 md:py-6 lg:py-[3.125rem]">
-            <header className='bg-transparent p-container'>
+        <header className="w-full bg-transparent relative py-2 md:py-6 lg:py-[3.125rem]">
+            <section className='bg-transparent p-container'>
                 <div className="w-full flex justify-between">
                     <Link to="/" className="text-decoration-none text-dark-19">
                         <div className="py-4 flex items-center gap-[0.625rem]">
@@ -40,10 +55,48 @@ const WhiteHeader = () => {
                     <div className='w-fit hidden lg:block'>
                         <RoundedButton text="Sign Up" />
                     </div>
+                    <button className="w-fit p-2 lg:hidden focus:outline-none border-none bg-transparent" onClick={openMenu}>
+                        <img src={menuOpen} alt="" className="w-[30px] h-[30px] md:w-[36px] md:h-[36px]" />
+                    </button>
                 </div>
-            </header>
+                {menuIsOpen ? (
+                    <section className="w-full h-screen bg-[#00000099] absolute top-0 left-0 z-[200] lg:hidden">
+                        <div className="w-full bg-white shadow pt-[26px] pb-[42px] pl-[16px] pr-[36px]">
+                            <div className="grid gap-4">
+                                <div className="w-full flex justify-end">
+                                    <button className="w-fit lg:hidden focus:outline-none border-none bg-transparent" onClick={closeMenu}>
+                                        <img src={menuClose} alt="" className="w-[30px] h-[30px] md:w-[36px] md:h-[36px]" />
+                                    </button>
+                                </div>
+                                <nav className='w-full'>
+                                    <ul className='w-full grid list-none'>
+                                        <li className='w-full py-[0.625rem] pl-2 pr-1 border-b-[0.5px] border-[#AEAEAE]'>
+                                            <NavLink to="/" className={navLinkClasses + "w-full p-[10px]"}>
+                                                Home
+                                            </NavLink>
+                                        </li>
+                                        <li className='w-full py-[0.625rem] pl-2 pr-1 border-b-[0.5px] border-[#AEAEAE]'>
+                                            <NavLink to="/packages" className={navLinkClasses + "w-full p-[10px]"}>
+                                                Packages
+                                            </NavLink>
+                                        </li>
+                                        <li className='w-full py-[0.625rem] pl-2 pr-1 border-b-[0.5px] border-[#AEAEAE]'>
+                                            <NavLink to="/products-and-services" className={navLinkClasses + "w-full p-[10px]"}>
+                                                Products & Services
+                                            </NavLink>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div className="w-full pl-5 mt-[0.625rem]">
+                                    <RoundedButton text="Sign Up" styles={{ width: "100%" }} />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                ) : null}
+            </section>
         </header>
     )
 }
 
-export default WhiteHeader
+export default WhiteHeader;
