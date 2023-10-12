@@ -3,6 +3,7 @@ import heroData from "../data/heroData";
 import RoundedButton from "../components/RoundedButton";
 import StatsSnippetGroup from "../components/StatsSnippetGroup";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
 const { home } = heroData;
 
@@ -25,7 +26,9 @@ const HomeHero = () => (
                         </p>
                         <div className="grid gap-[3.125rem]">
                             <div className="w-fit">
-                                <RoundedButton text="See our plans" />
+                                <Link to="/packages">
+                                    <RoundedButton text="See our plans" />
+                                </Link>
                             </div>
                             <StatsSnippetGroup arr={home.stats} />
                         </div>

@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 import RoundedButton from "./RoundedButton";
+import useNotAvailable from "../hooks/useNotAvailable";
 
 const ProductCard = ({ name, image, description, price, oldPrice, btnText }) => {
+    const { unavailable } = useNotAvailable();
 
     return (
         <div className="w-[320px] lg:w-full pt-6 px-10 pb-12 flex-none grid gap-4 rounded-[20px] border-[0.5px] border-grey-89">
@@ -23,7 +25,7 @@ const ProductCard = ({ name, image, description, price, oldPrice, btnText }) => 
                 </span>
             </div>
             <div className="mt-6 w-full">
-                <RoundedButton text={btnText} styles={{ width: "100%" }} />
+                <RoundedButton text={btnText} styles={{ width: "100%" }} clickHandler={unavailable} />
             </div>
         </div>
     )

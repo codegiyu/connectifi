@@ -11,6 +11,10 @@
     @apply px-4 sm:px-12 lg:px-16 xl:px-[6.25rem] 2xl:px-40 max-w-full xl:max-w-[1380px] mx-auto;
   }
 
+  .p-container-narrow {
+    @apply px-4 sm:px-12 lg:px-0 max-w-full lg:max-w-[990px] mx-auto;
+  }
+
   .p-container-full {
     @apply px-4 sm:px-12 lg:px-16 xl:px-[6.25rem] 2xl:px-40 max-w-full;
   }

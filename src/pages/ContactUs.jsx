@@ -4,29 +4,32 @@ import heroData from "../data/heroData";
 import { socialMediaIconsData } from "../data/footerData";
 import SocialMediaIconsGroup from "../components/SocialMediaIconsGroup";
 import GoToTop from "../hooks/GoToTop";
+import ContactDetails from "../sections/ContactPage/ContactDetails";
+import SendMessage from "../sections/ContactPage/SendMessage";
+import FAQs from "../sections/ContactPage/FAQs";
 
 const { contact } = heroData;
 
 const ContactUsPage = () => (
-    <MainLayout>
-        <>
-            <Hero
-                heading={contact.heading}
-                text={contact.text}
-                heroImg={contact.heroImg}
-                headingWidth={contact.headingWidth}
-                textWidth={contact.textWidth}
-            >
-                <div className="mt-16">
-                    <SocialMediaIconsGroup arr={socialMediaIconsData} />
-                </div>
-            </Hero>
-            <section className="py-10">
-                Contact Us Page
-            </section>
-            <GoToTop />
-        </>
-    </MainLayout>
+  <MainLayout>
+    <>
+      <Hero
+        heading={contact.heading}
+        text={contact.text}
+        heroImg={contact.heroImg}
+        headingWidth={contact.headingWidth}
+        textWidth={contact.textWidth}
+      >
+        <div className="mt-16">
+          <SocialMediaIconsGroup arr={socialMediaIconsData} />
+        </div>
+      </Hero>
+      <ContactDetails />
+      <FAQs />
+      <SendMessage />
+      <GoToTop />
+    </>
+  </MainLayout>
 )
 
-export default ContactUsPage
+export default ContactUsPage;
