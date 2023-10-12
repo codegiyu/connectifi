@@ -1,9 +1,11 @@
 import { useState } from "react";
 import RoundedButton from "../../components/RoundedButton";
 import search from "../../assets/search.svg";
+import useNotAvailable from "../../hooks/useNotAvailable";
 
 const Searchbar = () => {
     const [input, setInput] = useState("");
+    const { unavailable } = useNotAvailable();
 
     const handleChange = (e) => {
         setInput(e.target.value)
@@ -12,6 +14,7 @@ const Searchbar = () => {
     const runSearch = (e) => {
         e.preventDefault();
         setInput("");
+        unavailable();
     }
 
     return (

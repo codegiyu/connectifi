@@ -5,13 +5,14 @@ import Select from "../../components/Inputs/Select";
 import PackageInput from "../../components/Inputs/PackageInput";
 import ToggleInput from "../../components/Inputs/ToggleInput";
 import RegButton from "../../components/RegButton";
-import { ToastContainer, toast } from "react-toastify";
+import useNotAvailable from "../../hooks/useNotAvailable";
 
 const DataBundles = () => {
     const defaultInputs = { dataOptions: "", dataPackage: "", mobileNumber: "" };
     const [selectedProvider, setSelectedProvider] = useState(0);
     const [inputValues, setInputValues] = useState(defaultInputs);
     const [autoRenewToggle, setAutoRenewToggle] = useState(false);
+    const { unavailable } = useNotAvailable();
 
     const changeProvider = useCallback((providerIndex) => {
         setSelectedProvider(providerIndex);
@@ -34,12 +35,11 @@ const DataBundles = () => {
         setInputValues(defaultInputs);
         setAutoRenewToggle(false);
 
-        toast.warn("Sorry, this functionality is not available yet");
+        unavailable();
     }
 
     return (
         <section className="p-container py-[6.25rem]">
-            <ToastContainer />
             <section className="w-full grid gap-[70px]">
                 <div className="w-full grid gap-6">
                     <h2 className="body-text-2 md:heading-3 font-medium lg:heading-2 text-center text-dark-19">

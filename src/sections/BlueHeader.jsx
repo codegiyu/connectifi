@@ -5,10 +5,12 @@ import menuOpen from "../assets/menu-open-white.svg";
 import menuClose from "../assets/menu-close.svg";
 import { useEffect, useState } from 'react';
 import useScrollBlock from '../hooks/useScrollBlock';
+import useNotAvailable from '../hooks/useNotAvailable';
 
 const BlueHeader = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const [blockScroll, allowScroll] = useScrollBlock();
+    const { unavailable } = useNotAvailable();
 
     const openMenu = () => setMenuIsOpen(true);
     const closeMenu = () => setMenuIsOpen(false);
@@ -57,7 +59,7 @@ const BlueHeader = () => {
                         </ul>
                     </nav>
                     <div className='w-fit hidden lg:block'>
-                        <RoundedButton text="Sign Up" />
+                        <RoundedButton text="Sign Up" clickHandler={unavailable} />
                     </div>
                     <button className="w-fit p-2 lg:hidden focus:outline-none border-none bg-transparent" onClick={openMenu}>
                         <img src={menuOpen} alt="" className="w-[30px] h-[30px] md:w-[36px] md:h-[36px]" />
@@ -92,7 +94,7 @@ const BlueHeader = () => {
                                     </ul>
                                 </nav>
                                 <div className="w-full pl-5 mt-[0.625rem]">
-                                    <RoundedButton text="Sign Up" styles={{ width: "100%" }} />
+                                    <RoundedButton text="Sign Up" styles={{ width: "100%" }} clickHandler={unavailable} />
                                 </div>
                             </div>
                         </div>
