@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Mousewheel } from "swiper/modules";
 import { topDeals } from "../../data/productsData";
 import TopDealCard from "../../components/TopDealCard";
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/bundle';
 
 const TopDeals = () => {
 
@@ -15,19 +15,18 @@ const TopDeals = () => {
                 centeredSlides={true}
                 slidesPerView={'auto'}
                 loop={true}
-                // autoplay={{ delay: 5, disableOnInteraction: true }}
+                autoplay={{ delay: 5, disableOnInteraction: true }}
                 mousewheel={true}
-                spaceBetween={20}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
                     depth: 0,
-                    scale: 1,
+                    scale: 0.85,
                     modifier: 1,
                     slideShadows: false,
                 }}
                 pagination={false}
-                modules={[EffectCoverflow]}
+                modules={[EffectCoverflow, Mousewheel]}
                 className="mySwiper"
             >
                 {topDeals.map((item, idx) => (
