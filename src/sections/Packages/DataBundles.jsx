@@ -39,7 +39,7 @@ const DataBundles = () => {
     }
 
     return (
-        <section className="p-container py-[6.25rem]">
+        <section id="data-bundles" className="p-container py-[6.25rem]">
             <section className="w-full grid gap-[70px]">
                 <div className="w-full grid gap-6">
                     <h2 className="body-text-2 md:heading-3 font-medium lg:heading-2 text-center text-dark-19">

@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import RoundedButton from "../../components/RoundedButton";
-import useNotAvailable from "../../hooks/useNotAvailable";
 
 const Cta = () => {
-    const { unavailable } = useNotAvailable();
+    const navigate = useNavigate();
+
+    const handleClick = () => navigate("/packages#data-bundle");
 
     return (
         <section className="p-container py-32">
@@ -21,7 +23,7 @@ const Cta = () => {
                             text="Get Started"
                             textStyles={{ color: "#0071BC" }}
                             styles={{ background: "white" }}
-                            clickHandler={unavailable}
+                            clickHandler={handleClick}
                         />
                     </div>
                 </div>

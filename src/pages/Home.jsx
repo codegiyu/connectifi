@@ -23,6 +23,7 @@ const HomePage = () => {
                         heading={feature1.heading}
                         text={feature1.text}
                         btnText={feature1.btnText}
+                        link="/packages#data-bundle"
                     />
                     <div className="w-full flex justify-center py-5 md:py-10 lg:py-0">
                         <div className="w-[70%] h-[2px] bg-[#CBE1F053] blur-[2px]"></div>
@@ -32,6 +33,7 @@ const HomePage = () => {
                         heading={feature2.heading}
                         text={feature2.text}
                         btnText={feature2.btnText}
+                        link="/packages#data-bundle"
                     />
                 </section>
                 <Nationwide />

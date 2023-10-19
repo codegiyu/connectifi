@@ -26,7 +26,7 @@ const HomeHero = () => (
                         </p>
                         <div className="grid gap-[3.125rem]">
                             <div className="w-fit">
-                                <Link to="/packages">
+                                <Link to="/packages#data-bundles">
                                     <RoundedButton text="See our plans" />
                                 </Link>
                             </div>

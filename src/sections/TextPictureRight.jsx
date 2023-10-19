@@ -1,9 +1,19 @@
 import PropTypes from "prop-types";
 import RoundedButton from "../components/RoundedButton";
 import useNotAvailable from "../hooks/useNotAvailable";
+import { useNavigate } from "react-router-dom";
 
-const TextPictureRight = ({ image, heading, text, btnText }) => {
-    const { unavailable } = useNotAvailable
+const TextPictureRight = ({ image, heading, text, btnText, link = "" }) => {
+    const { unavailable } = useNotAvailable();
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        if (link) {
+            navigate(link)
+        } else {
+            unavailable();
+        }
+    }
 
     return (
         <section className="p-container py-8 md:py-12 lg:py-16 xl:py-20">
@@ -16,7 +26,7 @@ const TextPictureRight = ({ image, heading, text, btnText }) => {
                         {text}
                     </p>
                     <div>
-                        <RoundedButton text={btnText} clickHandler={unavailable} />
+                        <RoundedButton text={btnText} clickHandler={handleClick} />
                     </div>
                 </div>
                 <div className="w-full lg:self-center flex justify-center lg:justify-end items-center order-1 lg:order-2">
@@ -32,6 +42,7 @@ TextPictureRight.propTypes = {
     heading: PropTypes.string,
     text: PropTypes.string,
     btnText: PropTypes.string,
+    link: PropTypes.string,
 }
 
 export default TextPictureRight;
