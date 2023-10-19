@@ -4,7 +4,7 @@ import ComparePackageBlock from "../../components/ComparePackageBlock";
 const ComparePackages = () => {
 
     return (
-        <section className="p-container">
+        <section id="compare-packages" className="p-container">
             <section className="w-full grid gap-20">
                 <section className="w-full grid gap-6">
                     <h2 className="body-text-2 md:heading-3 font-medium lg:heading-2 text-dark-19">

@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Mousewheel } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Mousewheel } from "swiper/modules";
 import { topDeals } from "../../data/productsData";
 import TopDealCard from "../../components/TopDealCard";
 import 'swiper/css';
@@ -8,14 +8,14 @@ import 'swiper/css/bundle';
 const TopDeals = () => {
 
     return (
-        <section className="w-full mb-[6.25rem] bg-white">
+        <section id="top-deals" className="w-full mb-[6.25rem] bg-white">
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={'auto'}
                 loop={true}
-                autoplay={{ delay: 5, disableOnInteraction: true }}
+                autoplay={{ delay: 2000, disableOnInteraction: true }}
                 mousewheel={true}
                 coverflowEffect={{
                     rotate: 0,
@@ -26,7 +26,7 @@ const TopDeals = () => {
                     slideShadows: false,
                 }}
                 pagination={false}
-                modules={[EffectCoverflow, Mousewheel]}
+                modules={[EffectCoverflow, Mousewheel, Autoplay]}
                 className="mySwiper"
             >
                 {topDeals.map((item, idx) => (
