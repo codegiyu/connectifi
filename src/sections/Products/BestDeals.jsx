@@ -5,10 +5,10 @@ import ProductCard from "../../components/ProductCard";
 const BestDeals = () => {
 
     return (
-        <section className="p-container grid gap-[3.125rem]">
-            <TitleWithBtn heading="Best Deals" btnText="View All" />
+        <section id="available-products" className="p-container grid gap-[3.125rem]">
+            <TitleWithBtn heading="Available Products" />
             <div className="w-full overflow-scroll [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                <div className="flex flex-nowrap flex-none lg:grid lg:grid-cols-3 gap-[25px] items-stretch h-full">
+                <div className="flex flex-nowrap flex-none lg:grid lg:grid-cols-3 gap-x-[25px] gap-y-[50px] items-stretch h-full">
                     {bestDeals.map((item, idx) => (
                         <ProductCard
                             key={`bdeals-${idx}`}

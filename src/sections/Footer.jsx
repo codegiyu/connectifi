@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <footer className="">
-            <section className="w-full bg-pri-blue pt-[8.125rem] pb-[11.25rem]">
+            <section className="w-full bg-bright-blue pt-[8.125rem] pb-[11.25rem]">
                 <section className="p-container">
                     <div className="w-full grid gap-20 grid-cols-1 lg:grid-cols-[1fr_185px_185px] xl:grid-cols[1fr_185px_185px]">
                         <div className="w-full grid gap-6">
@@ -27,7 +27,7 @@ const Footer = () => {
                     </div>
                 </section>
             </section>
-            <section className="w-full bg-white p-container pt-6 pb-9 text-center">
+            <section className="w-full bg-white pt-6 pb-9 text-center">
                 <span className="w-max mx-auto body-text-6 md:body-text-5 leading-5 text-[#333] font-medium">
                     &copy; 2023 Connectifi. All rights reserved.
                 </span>

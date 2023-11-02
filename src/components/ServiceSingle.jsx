@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const ServiceSingle = ({ icon, heading, text }) => (
-    <div className="w-full sm:w-[490px] h-full pt-7 pb-8 px-8 bg-white grid gap-5 rounded-[20px] border border-[#AFAFAF] shadow-service">
+    <div className="w-full sm:w-[490px] h-full pt-7 pb-8 px-8 bg-white grid gap-5 rounded-[20px] ">
         <div className="w-[42px] lg:w-[52px] h-[44px] lg:h-[54px] grid place-items-center bg-bright-blue rounded-[10px]">
             <img src={icon} alt="" className="w-5 h-5 md:w-6 md:h-6" />
         </div>

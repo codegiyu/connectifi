@@ -3,6 +3,25 @@ import worktable from "../assets/images/worktable.png";
 import emily from "../assets/images/emily.png";
 import john from "../assets/images/john.png";
 import michael from "../assets/images/michael.png";
+import flash from "../assets/flash.svg";
+
+export const whyUsData = [
+    {
+        icon: flash,
+        heading: "Lightning-Fast Speed",
+        text: "Unlock the full potential of the digital world with our lightning-speed internet services."
+    },
+    {
+        icon: flash,
+        heading: "Reliable Connections",
+        text: "No more frustration from sudden disconnects. Count on us to keep you connected, always"
+    },
+    {
+        icon: flash,
+        heading: "Customized Packages",
+        text: "We offer a range of flexible and customized packages designed to match your lifestyle."
+    },
+]
 
 export const feature1 = {
     image: businessman,

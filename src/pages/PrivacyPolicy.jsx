@@ -2,9 +2,10 @@ import MainLayout from "../layouts/MainLayout";
 import privacyPolicyData from "../data/privacyPolicyData";
 import PolicyNumberGroup from "../components/PolicyNumberGroup";
 import GoToTop from "../hooks/GoToTop";
+import Cta from "../sections/Cta";
 
 const PrivacyPolicyPage = () => (
-    <MainLayout hasWhiteHeader={true}>
+    <MainLayout whiteBody={true}>
         <>
             <GoToTop />
             <section className="pt-[6.25rem] pb-8 p-container grid gap-10">
@@ -17,7 +18,7 @@ const PrivacyPolicyPage = () => (
                     practices concerning the collection, use, and protection of your data when you use our services.`}
                 </p>
             </section>
-            <section className="p-container grid gap-[3.125rem] pb-[150px]">
+            <section className="p-container grid gap-[3.125rem] pb-0">
                 {privacyPolicyData.map((item, idx) => (
                     <PolicyNumberGroup
                         key={`pnumgrp-${idx}`}
@@ -28,6 +29,7 @@ const PrivacyPolicyPage = () => (
                     />
                 ))}
             </section>
+            <Cta />
         </>
     </MainLayout>
 )

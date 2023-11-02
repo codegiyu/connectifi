@@ -7,6 +7,7 @@ import GoToTop from "../hooks/GoToTop";
 import ContactDetails from "../sections/ContactPage/ContactDetails";
 import SendMessage from "../sections/ContactPage/SendMessage";
 import FAQs from "../sections/ContactPage/FAQs";
+import Cta from "../sections/Cta";
 
 const { contact } = heroData;
 
@@ -27,6 +28,7 @@ const ContactUsPage = () => (
       <ContactDetails />
       <FAQs />
       <SendMessage />
+      <Cta />
       <GoToTop />
     </>
   </MainLayout>

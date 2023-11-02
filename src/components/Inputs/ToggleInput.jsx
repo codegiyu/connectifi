@@ -1,24 +1,25 @@
 import PropTypes from "prop-types";
 
-const ToggleInput = ({ name, value = "", changeHandler, placeholder = "" }) => {
+const ToggleInput = ({ name, value = "", changeHandler }) => {
 
     return (
         <label
-            className="w-full body-text-5 md:body-text-3 text-grey-89 p-4 bg-[#F2F2F2] rounded-[15px] border-none \
-            focus:outline-none flex items-center justify-between gap-[10px]"
+            className="w-fit relative"
         >
-            <span>{placeholder}</span>
             <input
                 type="checkbox"
                 name={name}
                 checked={value}
                 onChange={changeHandler}
-                className="w-0 h-0 visibility-none"
+                className="w-0 h-0 visibility-none absolute"
             />
-            <div className={`w-[1.875rem] h-fit p-[2px] border-[1.5px] border-[#292D32] rounded-[10px] flex ${value ? "bg-[#CCE3F2] justify-end" : "justify-start"} \
-                transition-all duration-300 ease`}
+            <div className={`w-[5.625rem] h-fit p-[6px] rounded-[18px] flex ${value ? "bg-bright-blue justify-end" : "bg-[#17374C] justify-start"} \
+                transition-all duration-[500ms] ease`}
             >
-                <span className={`w-[10px] h-[10px] border-[1.5px] border-[#292D32] rounded-full block ${value ? "bg-[#292D32]" : ""}`}></span>
+                <span 
+                    className={`w-[20px] h-[20px] border-[1.5px] rounded-full block transition-all duration-[500ms] ease 
+                    ${value ? "bg-[#17374C] border-[#17374C]" : "bg-bright-blue border-bright-blue"}`}
+                ></span>
             </div>
         </label>
     )
@@ -27,7 +28,6 @@ const ToggleInput = ({ name, value = "", changeHandler, placeholder = "" }) => {
 ToggleInput.propTypes = {
     name: PropTypes.string,
     value: PropTypes.bool,
-    placeholder: PropTypes.string,
     changeHandler: PropTypes.func
 }
 

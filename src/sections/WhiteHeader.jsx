@@ -16,11 +16,11 @@ const WhiteHeader = () => {
     const closeMenu = () => setMenuIsOpen(false);
 
     const navLinkClasses = ({ isActive }) => {
-        return `${isActive ? "font-bold text-pri-blue" : "text-dark-19 lg:text-grey-89"} text-sm md:text-xl leading-[18px] md:leading-[100%] hover:text-pri-blue`
+        return `${isActive ? "font-bold text-[#17374D]" : "text-dark-19 lg:text-grey-89"} text-sm md:text-xl leading-[18px] md:leading-[100%] hover:text-[#17374D]`
     }
 
     const navLinkClassesMob = ({ isActive }) => {
-        return `${isActive ? "font-bold text-pri-blue" : "text-dark-19 lg:text-grey-89"} text-sm md:text-xl leading-[18px] md:leading-[100%] hover:text-pri-blue w-full p-[10px]`
+        return `${isActive ? "font-bold text-[#17374D]" : "text-dark-19 lg:text-grey-89"} text-sm md:text-xl leading-[18px] md:leading-[100%] hover:text-[#17374D] w-full p-[10px]`
     }
 
     useEffect(() => {

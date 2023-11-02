@@ -17,7 +17,7 @@ const RegButton = ({
             style={styles}
             {...props}
         >
-            <span className='font-medium body-text-3 md:text-[1.875rem] md:leading-9 text-white uppercase' style={textStyles}>
+            <span className='font-medium body-text-3 md:text-[1.875rem] md:leading-9 text-white' style={textStyles}>
                 {text}
             </span>
         </button>

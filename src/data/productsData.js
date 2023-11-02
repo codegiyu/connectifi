@@ -1,8 +1,12 @@
 import g4mifi from "../assets/images/4g-lite-mifi.png";
 import bluemifi from "../assets/images/5g-mifi-blue.png";
 import whitemifi from "../assets/images/5g-mifi-white.png";
+import mifi5gVoice from "../assets/images/5g-mifi-voice.png";
 import turbo5g from "../assets/images/5g-turbo-router.png";
+import black5g from "../assets/images/5g-black.png";
+import turbo5gWhite from "../assets/images/5g-turbo-white.png";
 import usbDongle from "../assets/images/usb-hotspot-dongle.png";
+import tetlink from "../assets/images/tetlink.jpg";
 import deal1 from "../assets/images/deal-1.png";
 import deal2 from "../assets/images/deal-2.png";
 import deal3 from "../assets/images/deal-3.png";
@@ -12,28 +16,76 @@ import whiteCubes from "../assets/convert-3d-cube-white.svg";
 
 export const bestDeals = [
     {
-        image: turbo5g,
+        image: turbo5gWhite,
         name: "5g Turbo Router",
         description: "Fast browsing and download speeds",
-        price: "₦18,500",
+        price: "₦15,500",
         oldPrice: "",
-        btnText: "Add to Cart"
+        btnText: "Add To Cart"
     },
     {
         image: bluemifi,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
+        price: "₦8,000",
+        oldPrice: "",
+        btnText: "Add To Cart"
+    },
+    {
+        image: mifi5gVoice,
+        name: "5g Mifi + Voice",
+        description: "A wireless, broadband internet",
+        price: "₦25,000",
+        oldPrice: "",
+        btnText: "Add To Cart"
+    },
+    {
+        image: usbDongle,
+        name: "USB Hotspot Dongle",
+        description: "Fast browsing and download speeds",
+        price: "₦11,500",
+        oldPrice: "",
+        btnText: "Add To Cart"
+    },
+    {
+        image: black5g,
+        name: "5g Mifi + Voice",
+        description: "A wireless, broadband internet",
+        price: "₦18,500",
+        oldPrice: "",
+        btnText: "Add To Cart"
+    },
+    {
+        image: g4mifi,
+        name: "4g Lite Mifi",
+        description: "A wireless, broadband internet",
+        price: "₦10,500",
+        oldPrice: "",
+        btnText: "Add To Cart"
+    },
+    {
+        image: turbo5g,
+        name: "5g Turbo Router",
+        description: "Fast browsing and download speeds",
+        price: "₦12,000",
+        oldPrice: "",
+        btnText: "Add To Cart"
+    },
+    {
+        image: tetlink,
+        name: "5g Mifi + Voice",
+        description: "A wireless, broadband internet",
         price: "₦22,500",
         oldPrice: "",
-        btnText: "Add to Cart"
+        btnText: "Add To Cart"
     },
     {
         image: whitemifi,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
-        price: "₦20,000",
+        price: "₦9,000",
         oldPrice: "",
-        btnText: "Add to Cart"
+        btnText: "Add To Cart"
     },
 ]
 

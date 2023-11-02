@@ -1,20 +1,26 @@
 import PropTypes from "prop-types";
 
-const PackageInput = ({ name, value = "", type = "text", changeHandler, placeholder = "" }) => {
+const PackageInput = ({ label, name, value, type = "text", changeHandler, placeholder = "" }) => {
 
     return (
-        <input
-            name={name}
-            value={value}
-            type={type}
-            placeholder={placeholder}
-            className="w-full body-text-5 md:body-text-3 placeholder:text-grey-89 text-dark-19 p-4 bg-[#F2F2F2] rounded-[15px] border-none focus:outline-none"
-            onChange={changeHandler}
-        />
+        <label className="w-full grid gap-2">
+            <span className="body-text-6 md:body-text-5 leading-5 text-white">
+                {label}
+            </span>
+            <input
+                name={name}
+                value={value}
+                type={type}
+                placeholder={placeholder}
+                className="w-full px-[12px] py-[16.75px] rounded bg-[#DAE9F2] body-text-7 md:body-text-6 placeholder:text-grey-89 text-[#3F3F3F] focus:outline-none"
+                onChange={changeHandler}
+            />
+        </label>
     )
 }
 
 PackageInput.propTypes = {
+    label: PropTypes.string,
     name: PropTypes.string,
     value: PropTypes.string,
     placeholder: PropTypes.string,
