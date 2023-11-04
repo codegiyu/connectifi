@@ -40,8 +40,8 @@ const heroData = {
         textWidth: "520px",
         heroImg: {
             src: stylish,
-            width: 551,
-            height: 510
+            width: 790,
+            height: 604
         }
     },
     home: {
