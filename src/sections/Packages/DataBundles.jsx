@@ -6,15 +6,26 @@ import RegButton from "../../components/RegButton";
 import useNotAvailable from "../../hooks/useNotAvailable";
 import { useSearchParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import useAppStore from "../../store/useAppStore";
+import blueArrow from "../../assets/blue-arrow.svg";
 
 const DataBundles = () => {
     const defaultInputs = { network: "", package: "", option: "", phone: "", renewal: "" };
 
+    const user = useAppStore(state => state.user);
     const [searchParams, setSearchParams] = useSearchParams();
     const [inputValues, setInputValues] = useState(defaultInputs);
     const [packages, setPackages] = useState([]);
     const [dataOptions, setDataOptions] = useState([]);
     const { unavailable } = useNotAvailable();
+
+    const tryItOut = () => {
+        const el = document.querySelector("#network-select");
+        
+        if (el) {
+            el.click();
+        }
+    }
 
     const handleInputChange = (e) => {
         const name = e.target.name;
@@ -45,6 +56,11 @@ const DataBundles = () => {
             return;
         }
 
+        if (!user) {
+            toast.error("Please log in to access this feature");
+            return;
+        }
+
         setInputValues(defaultInputs);
 
         unavailable();
@@ -54,7 +70,6 @@ const DataBundles = () => {
         const network = searchParams.get("network");
         const packageType = searchParams.get("packageType");
         const option = searchParams.get("option");
-        console.log(network, packageType, option);
         
         if (network && packageType && option) {
             const el = document.querySelector("#data-bundles");
@@ -73,6 +88,12 @@ const DataBundles = () => {
             setTimeout(() => {
                 setInputValues(prevState => ({ ...prevState, option }));
             }, 1500)
+            setTimeout(() => {
+                searchParams.delete("network");
+                searchParams.delete("packageType");
+                searchParams.delete("option");
+                setSearchParams(searchParams);
+            }, 2000)
             
         } 
     }, [searchParams, setSearchParams])
@@ -113,6 +134,13 @@ const DataBundles = () => {
                         {`We have the major networks covered; simply choose your network and data package of choice, \
                         and explore the world of possibilities`}
                     </span>
+                    <button 
+                        className="p-[10px] flex gap-[10px] items-center bg-transparent border-none outline-none text-bright-blue body-text-6 md:body-text-3"
+                        onClick={tryItOut}
+                    >
+                        <span>Try it out</span>
+                        <img src={blueArrow} alt="" className="w-6" />
+                    </button>
                 </div>
 
                 <div>

@@ -1,10 +1,21 @@
 import PropTypes from "prop-types";
 import useNotAvailable from "../hooks/useNotAvailable";
 import RegButton from "./RegButton";
+import useAppStore from "../store/useAppStore";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ name, image, description, price, oldPrice, btnText, providerIcon }) => {
+    const user = useAppStore(state => state.user);
     const { unavailable } = useNotAvailable();
-    console.log(providerIcon)
+    
+    const handleAddToCart = () => {
+        if (!user) {
+            toast.error("Please login to access this feature");
+            return;
+        }
+
+        unavailable();
+    }
 
     return (
         <div className="w-full md:w-[320px] lg:w-full pt-6 px-10 pb-12 flex-none grid gap-[30px] rounded-[20px] bg-white">
@@ -31,7 +42,7 @@ const ProductCard = ({ name, image, description, price, oldPrice, btnText, provi
                 </span>
             </div>
             <div className="mt-6 w-full">
-                <RegButton text={btnText} styles={{ width: "100%" }} clickHandler={unavailable} />
+                <RegButton text={btnText} styles={{ width: "100%" }} clickHandler={handleAddToCart} />
             </div>
         </div>
     )

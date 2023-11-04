@@ -23,8 +23,8 @@ const PlanSingle = ({providerIcon, networkIndex, packageIndex, packageType, pric
                 { packageType }
             </h3>
             <p className="w-max flex gap-1 items-end text-[#3F3F3F] text-center">
-                <span className="text-[22px] leading-7">
-                    {`${price}GB`}
+                <span className="text-[22px] leading-7 font-semibold">
+                    {`${price}`}
                 </span>
                 <span className="text-base">
                     {` / ${duration}`}

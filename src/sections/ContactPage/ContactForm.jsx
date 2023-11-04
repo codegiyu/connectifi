@@ -2,14 +2,14 @@ import { useState } from "react";
 import Input from "../../components/Inputs/Inputs";
 import Textarea from "../../components/Inputs/Textarea";
 import RoundedButton from "../../components/RoundedButton";
-import useNotAvailable from "../../hooks/useNotAvailable";
+// import useNotAvailable from "../../hooks/useNotAvailable";
 import { toast } from "react-toastify";
 
 
 const ContactForm = () => {
     const defaultInputs = { name: "", email: "", message: "" };
     const [inputValues, setInputValues] = useState(defaultInputs);
-    const { unavailable } = useNotAvailable();
+    // const { unavailable } = useNotAvailable();
 
     const handleInputChange = (e) => {
         const name = e.target.name;
@@ -35,7 +35,8 @@ const ContactForm = () => {
         }
 
         setInputValues(defaultInputs);
-        unavailable();
+        // unavailable();
+        toast.success("Thank you for your message! We will respond as soon as we can")
     }
 
     return (
@@ -67,7 +68,7 @@ const ContactForm = () => {
                     changeHandler={handleInputChange}
                 />
                 <div className="w-full mt-[26px]">
-                    <RoundedButton text="Send" styles={{ width: "100%", borderRadius: "8px", padding: "25px 16px" }} />
+                    <RoundedButton type="submit" text="Send" styles={{ width: "100%", borderRadius: "8px", padding: "25px 16px" }} />
                 </div>
             </div>
         </form>
