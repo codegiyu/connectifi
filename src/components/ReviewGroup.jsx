@@ -7,7 +7,7 @@ const ReviewGroup = ({ arr }) => {
 
     return (
         <section className="w-full flex flex-nowrap flex-none h-full">
-            <section className="flex flex-nowrap items-stretch gap-9 2xl:gap-14 2xl:justify-center">
+            <section className="flex flex-nowrap items-stretch gap-9 2xl:gap-14 2xl:justify-center animate-marquee">
             {/* <Swiper
                 // loop={true}
                 slidesPerView={"auto"}

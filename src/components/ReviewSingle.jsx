@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const ReviewSingle = ({ text, image, name, title }) => (
     <div
-        className="w-[300px] md:w-[400px] lg:w-[420px] xl:w-[480px] h-full p-[1.875rem] grid items gap-[1.875rem] border 
+        className="w-[300px] md:w-[400px] lg:w-[420px] xl:w-[480px] h-full p-[1.875rem] bg-white grid items gap-[1.875rem] border 
         border-[#F0F0F0] rounded-[10px] hover:border-none hover:shadow-reviewBox flex-none"
     >
         <p className="w-full body-text-7 md:body-text-4  text-[#333]">

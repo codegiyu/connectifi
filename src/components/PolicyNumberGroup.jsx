@@ -30,7 +30,7 @@ PolicyNumberGroup.propTypes = {
     numbering: PropTypes.string,
     heading: PropTypes.string,
     text: PropTypes.string,
-    subData: PropTypes.object,
+    subData: PropTypes.array,
 }
 
 export default PolicyNumberGroup;
