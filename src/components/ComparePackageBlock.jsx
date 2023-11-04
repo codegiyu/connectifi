@@ -28,7 +28,7 @@ const ComparePackageBlock = () => {
     useEffect(() => {
         if (inputValues.dataPackage) {
             const value = inputValues.dataPackage;
-            setDataOptions(internetProviders[inputValues.network].dataPackages[value]?.dataOptions)
+            setDataOptions(internetProviders[inputValues.network].dataPackages[value]?.dataOptions.map(item => `${item.benefits} - (${item.price})`))
         } else {
             setDataOptions([]);
         }

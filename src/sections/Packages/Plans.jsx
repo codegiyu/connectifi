@@ -1,16 +1,20 @@
 import { useState } from "react";
 import ToggleInput from "../../components/Inputs/ToggleInput";
 import PlanSingle from "../../components/PlanSingle";
-import { sitePlans } from "../../data/packagesData";
+import { ALL_PLANS } from "../../data/packagesData";
+import { randomizeArray } from "../../utils/randomizeArray";
+// import { sitePlans } from "../../data/packagesData";
 
 
 const Plans = () => {
     const [isYearly, setIsYearly] = useState(false);
 
     const togglePeriod = () => setIsYearly(prevState => !prevState);
+    console.log(ALL_PLANS);
+    console.log(randomizeArray([1,2,3,4,5,6,7,8,9,10]))
 
     return (
-        <section className="p-container pt-[3.125rem]">
+        <section className=" pt-[3.125rem]">
             <section className="grid gap-6">
                 <div className="w-full flex justify-center">
                     <div className="flex gap-6 items-center p-6">
@@ -24,17 +28,17 @@ const Plans = () => {
                     </div>
                 </div>
 
-                <div className="grid lg: grid-cols-3 items-stretch gap-6">
-                    {sitePlans.map((item,idx) => (
+                <div className="flex flex-nowrap gap-6 overflow-hidden">
+                    {ALL_PLANS.map((item,idx) => (
                         <PlanSingle
                             key={idx} 
-                            icon={item.icon}
-                            heading={item.heading}
-                            data={item.data}
+                            providerIcon={item.providerIcon} 
+                            packageType={item.packageType}
+                            networkIndex={item.networkIndex}
+                            packageIndex={item.packageIndex}
                             price={item.price}
                             duration={item.duration}
-                            text={item.text}
-                            perks={item.perks}
+                            benefits={item.benefits}
                         />
                     ))}
                 </div>

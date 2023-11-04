@@ -4,9 +4,13 @@ import Select from "../../components/Inputs/Select";
 import PackageInput from "../../components/Inputs/PackageInput";
 import RegButton from "../../components/RegButton";
 import useNotAvailable from "../../hooks/useNotAvailable";
+import { useSearchParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const DataBundles = () => {
     const defaultInputs = { network: "", package: "", option: "", phone: "", renewal: "" };
+
+    const [searchParams, setSearchParams] = useSearchParams();
     const [inputValues, setInputValues] = useState(defaultInputs);
     const [packages, setPackages] = useState([]);
     const [dataOptions, setDataOptions] = useState([]);
@@ -27,10 +31,51 @@ const DataBundles = () => {
 
     const buyPackage = (e) => {
         e.preventDefault(e);
+
+        let allInputsOkay = true;
+
+        for (let key in inputValues) {
+            if (inputValues[key] === "") {
+                allInputsOkay = false
+            }
+        }
+
+        if (!allInputsOkay) {
+            toast.error("Please fill out all form fields");
+            return;
+        }
+
         setInputValues(defaultInputs);
 
         unavailable();
     }
+
+    useEffect(() => {
+        const network = searchParams.get("network");
+        const packageType = searchParams.get("packageType");
+        const option = searchParams.get("option");
+        console.log(network, packageType, option);
+        
+        if (network && packageType && option) {
+            const el = document.querySelector("#data-bundles");
+
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+
+            
+            console.log(el)
+
+            setInputValues(prevState => ({ ...prevState, network }));
+            setTimeout(() => {
+                setInputValues(prevState => ({ ...prevState, package: packageType }));
+            }, 750)
+            setTimeout(() => {
+                setInputValues(prevState => ({ ...prevState, option }));
+            }, 1500)
+            
+        } 
+    }, [searchParams, setSearchParams])
 
     useEffect(() => {
         if (inputValues.network) {
@@ -46,16 +91,16 @@ const DataBundles = () => {
         if (inputValues.package) {
             const value = inputValues.package;
             setDataOptions(internetProviders[inputValues.network].dataPackages[value]?.dataOptions.map(item => (
-                { text: item, value: item }
+                { text: `${item.benefits} - (${item.price})`, value: item.benefits }
             )))
         } else {
             setDataOptions([]);
         }
     }, [inputValues.package]);
 
-    useEffect(() => {
-        console.log(dataOptions)
-    }, [dataOptions])
+    // useEffect(() => {
+    //     console.log(dataOptions)
+    // }, [dataOptions])
 
     return (
         <section id="data-bundles" className="p-container py-[7.5rem]">

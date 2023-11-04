@@ -3,6 +3,7 @@ import Input from "../../components/Inputs/Inputs";
 import Textarea from "../../components/Inputs/Textarea";
 import RoundedButton from "../../components/RoundedButton";
 import useNotAvailable from "../../hooks/useNotAvailable";
+import { toast } from "react-toastify";
 
 
 const ContactForm = () => {
@@ -19,6 +20,19 @@ const ContactForm = () => {
 
     const semdMessage = (e) => {
         e.preventDefault();
+
+        let allInputsOkay = true;
+
+        for (let key in inputValues) {
+            if (inputValues[key] === "") {
+                allInputsOkay = false
+            }
+        }
+
+        if (!allInputsOkay) {
+            toast.error("Please fill in all form fields");
+            return;
+        }
 
         setInputValues(defaultInputs);
         unavailable();

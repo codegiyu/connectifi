@@ -4,6 +4,7 @@ import WhiteHeader from '../sections/WhiteHeader';
 import Footer from '../sections/Footer';
 import Widget from '../sections/Widget';
 import WidgetChat from '../sections/WidgetChat';
+import AuthLayout from '../pages/AuthLayout';
 
 const MainLayout = ({ whiteBody = false, hasHeader = true, children }) => {
 
@@ -14,6 +15,7 @@ const MainLayout = ({ whiteBody = false, hasHeader = true, children }) => {
                 {children}
                 <WidgetChat />
                 <Widget />
+                <AuthLayout />
             </main>
             <Footer />
         </div>
