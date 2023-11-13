@@ -5,7 +5,7 @@ const FooterLink = ({ text, link }) => {
 
     return (
         <Link to={link} className="text-decoration-none text-grey-d9">
-            <span className="text-xl leading-5 hover:text-white">{text}</span>
+            <span className="body-text-6 md:body-text-5 leading-5 hover:text-white">{text}</span>
         </Link>
     )
 }

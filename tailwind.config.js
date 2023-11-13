@@ -12,6 +12,22 @@ export default {
         "grey-d9": "#D9D9D9",
         "dark-19": "#191919",
         "bright-blue": "#049BFF"
+      },
+      backgroundImage: {
+        homeHero: "linear-gradient(180deg, rgba(0, 113, 188, 0.01) 0%, rgba(166, 213, 243, 0.09) 100%)"
+      },
+      boxShadow: {
+        reviewBox: "0px 4px 15px 0px rgba(0, 113, 188, 0.17)",
+        service: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+      },
+      animation: {
+        marquee: "marquee 30s linear infinite"
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(200%)' },
+        }
       }
     },
   },
