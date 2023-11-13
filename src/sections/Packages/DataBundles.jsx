@@ -17,6 +17,7 @@ const DataBundles = () => {
     const [inputValues, setInputValues] = useState(defaultInputs);
     const [packages, setPackages] = useState([]);
     const [dataOptions, setDataOptions] = useState([]);
+    const [selectedOptionPrice, setSelectedOptionPrice] = useState(0);
     const { unavailable } = useNotAvailable();
 
     const tryItOut = () => {
@@ -61,7 +62,15 @@ const DataBundles = () => {
             return;
         }
 
+        console.log(inputValues)
+
         setInputValues(defaultInputs);
+        setTimeout(() => {
+            searchParams.delete("network");
+            searchParams.delete("packageType");
+            searchParams.delete("option");
+            setSearchParams(searchParams);
+        }, 1000)
 
         unavailable();
     }
@@ -88,20 +97,14 @@ const DataBundles = () => {
             setTimeout(() => {
                 setInputValues(prevState => ({ ...prevState, option }));
             }, 1500)
-            setTimeout(() => {
-                searchParams.delete("network");
-                searchParams.delete("packageType");
-                searchParams.delete("option");
-                setSearchParams(searchParams);
-            }, 2000)
-            
+                        
         } 
     }, [searchParams, setSearchParams])
 
     useEffect(() => {
         if (inputValues.network) {
             const value = inputValues.network;
-            setInputValues((prevInputs) => ({ ...prevInputs, package: "" }));
+            setInputValues((prevInputs) => ({ ...prevInputs, package: "", option: "" }));
             setPackages(internetProviders[value].dataPackages.map((item,idx) => ({ text: item.packageName, value: String(idx)})));
         } else {
             setPackages([]);
@@ -111,17 +114,26 @@ const DataBundles = () => {
     useEffect(() => {
         if (inputValues.package) {
             const value = inputValues.package;
+            setInputValues((prevInputs) => ({ ...prevInputs, option: "" }));
             setDataOptions(internetProviders[inputValues.network].dataPackages[value]?.dataOptions.map(item => (
-                { text: `${item.benefits} - (${item.price})`, value: item.benefits }
+                { text: `${item.benefits} - (₦${item.price})`, value: `${item.benefits} - (₦${item.price})` }
             )))
         } else {
             setDataOptions([]);
         }
-    }, [inputValues.package]);
+    }, [inputValues.package, inputValues.network]);
 
-    // useEffect(() => {
-    //     console.log(dataOptions)
-    // }, [dataOptions])
+    useEffect(() => {
+        if (inputValues.option && inputValues.package && inputValues.network) {
+            const { option, package: dataPackage, network } = inputValues;
+            const price = internetProviders[network].dataPackages[dataPackage].dataOptions.find(item => item.benefits === option.split(" - ")[0])?.price;
+            console.log(price);
+
+            setSelectedOptionPrice(price);
+        } else {
+            setSelectedOptionPrice(0);
+        }
+    }, [inputValues])
 
     return (
         <section id="data-bundles" className="p-container py-[7.5rem]">

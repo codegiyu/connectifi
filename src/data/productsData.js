@@ -20,7 +20,7 @@ export const bestDeals = [
         image: turbo5gWhite,
         name: "5g Turbo Router",
         description: "Fast browsing and download speeds",
-        price: "₦15,500",
+        price: 15500,
         providerIcon: providerImages["Airtel"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -29,7 +29,7 @@ export const bestDeals = [
         image: bluemifi,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
-        price: "₦8,000",
+        price: 8000,
         providerIcon: providerImages["MTN"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -38,7 +38,7 @@ export const bestDeals = [
         image: mifi5gVoice,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
-        price: "₦25,000",
+        price: 25000,
         providerIcon: providerImages["Airtel"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -47,7 +47,7 @@ export const bestDeals = [
         image: usbDongle,
         name: "USB Hotspot Dongle",
         description: "Fast browsing and download speeds",
-        price: "₦11,500",
+        price: 11500,
         providerIcon: providerImages["ipNX"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -56,7 +56,7 @@ export const bestDeals = [
         image: black5g,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
-        price: "₦18,500",
+        price: 18500,
         providerIcon: providerImages["Smile"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -65,7 +65,7 @@ export const bestDeals = [
         image: g4mifi,
         name: "4g Lite Mifi",
         description: "A wireless, broadband internet",
-        price: "₦10,500",
+        price: 10500,
         providerIcon: providerImages["MTN"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -74,7 +74,7 @@ export const bestDeals = [
         image: turbo5g,
         name: "5g Turbo Router",
         description: "Fast browsing and download speeds",
-        price: "₦12,000",
+        price: 12000,
         providerIcon: providerImages["Airtel"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -83,7 +83,7 @@ export const bestDeals = [
         image: tetlink,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
-        price: "₦22,500",
+        price: 22500,
         providerIcon: providerImages["ipNX"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -92,7 +92,7 @@ export const bestDeals = [
         image: whitemifi,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
-        price: "₦9,000",
+        price: 9000,
         providerIcon: providerImages["MTN"],
         oldPrice: "",
         btnText: "Add To Cart"
@@ -104,24 +104,24 @@ export const bestDeals = [
 //         image: usbDongle,
 //         name: "USB Hotspot Dongle",
 //         description: "Fast browsing and download speeds",
-//         price: "₦18,500",
-//         oldPrice: "₦25,200",
+//         price: 18500,
+//         oldPrice: 25200,
 //         btnText: "Add to Cart"
 //     },
 //     {
 //         image: bluemifi,
 //         name: "5g Mifi + Voice",
 //         description: "A wireless, broadband internet",
-//         price: "₦22,500",
-//         oldPrice: "₦30,000",
+//         price: 22500,
+//         oldPrice: 30000,
 //         btnText: "Add to Cart"
 //     },
 //     {
 //         image: g4mifi,
 //         name: "4g Lite Mifi",
 //         description: "A wireless, broadband internet",
-//         price: "₦12,500",
-//         oldPrice: "₦18,600",
+//         price: 12500,
+//         oldPrice: 18600,
 //         btnText: "Add to Cart"
 //     },
 // ]

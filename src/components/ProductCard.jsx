@@ -34,11 +34,11 @@ const ProductCard = ({ name, image, description, price, oldPrice, btnText, provi
                 </p>
                 {oldPrice ? (
                     <span className="text-base md:text-[22.67px] font-medium line-through text-[#898989] leading-[27px] mx-auto">
-                        {oldPrice}
+                        {"₦" + oldPrice.toLocaleString()}
                     </span>
                 ) : null}
                 <span className="leading-[122%] text-[28px] md:text-[36px] font-bold mx-auto text-[#3F3F3F]">
-                    {price}
+                    {"₦" + price.toLocaleString()}
                 </span>
             </div>
             <div className="mt-6 w-full">
@@ -52,8 +52,8 @@ ProductCard.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string,
     description: PropTypes.string,
-    oldPrice: PropTypes.string,
-    price: PropTypes.string,
+    oldPrice: PropTypes.number,
+    price: PropTypes.number,
     btnText: PropTypes.string,
     providerIcon: PropTypes.string
 }

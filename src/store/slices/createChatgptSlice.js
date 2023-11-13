@@ -3,7 +3,7 @@ import botPic from "../../assets/images/bot-pic.png";
 import { toast } from "react-toastify";
 
 const openai = new OpenAI({ 
-    apiKey: import.meta.env.VITE_FIREBASE_OPENAI_SECRET_KEY,
+    apiKey: import.meta.env.VITE_OPENAI_SECRET_KEY,
     dangerouslyAllowBrowser: true
 });
 

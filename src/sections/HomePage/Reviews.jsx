@@ -4,8 +4,8 @@ import ReviewGroup from "../../components/ReviewGroup";
 const Reviews = () => {
 
     return (
-        <section className="p-container grid gap-20 pt-[6.25rem]">
-            <div className="grid lg:grid-cols-2 lg:items-center gap-[1.875rem] lg:gap-36 xl:gap-[270px]">
+        <section className=" grid gap-20 pt-[6.25rem]">
+            <div className="p-container grid lg:grid-cols-2 lg:items-center gap-[1.875rem] lg:gap-36 xl:gap-[270px]">
                 <h3 className="w-full text-dark-19 heading-3 font-semibold md:heading-2 text-center lg:text-start">
                     Words From Our Valued Clients
                 </h3>
