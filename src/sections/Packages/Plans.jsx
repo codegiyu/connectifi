@@ -2,8 +2,8 @@
 // import ToggleInput from "../../components/Inputs/ToggleInput";
 import { useEffect, useLayoutEffect, useState } from "react";
 import PlanSingle from "../../components/PlanSingle";
-import { ALL_PLANS } from "../../data/packagesData";
-// import { randomizeArray } from "../../utils/randomizeArray";
+import { ALL_PLANS_ORDERLY } from "../../data/packagesData";
+import { randomizeArray } from "../../utils/randomizeArray";
 // import { sitePlans } from "../../data/packagesData";
 
 
@@ -11,6 +11,7 @@ const Plans = () => {
     // const [isYearly, setIsYearly] = useState(false);
     // const togglePeriod = () => setIsYearly(prevState => !prevState);
 
+    const [ALL_PLANS, setAllPlans] = useState([]);
     const [leftBtnDisabled, setleftBtnDisabled] = useState(true);
     const [rightBtnDisabled, setRightBtnDisabled] = useState(false);
     const [translateX, setTranslateX] = useState(0);
@@ -41,7 +42,7 @@ const Plans = () => {
     }, [])
 
     useEffect(() => {
-        const slidesNum = ALL_PLANS.length;
+        const slidesNum = ALL_PLANS_ORDERLY.length;
         const totalSlideWidth = (slidesNum * PLAN_CARD_WIDTH) + ((slidesNum - 1) * PLAN_CARD_GAP);
         const maxExtension = totalSlideWidth - screenWidth;
 
@@ -68,6 +69,10 @@ const Plans = () => {
         //     setleftBtnDisabled(false);
         // }
     }, [translateX, maxSlideContainerExtension, screenWidth])
+
+    useEffect(() => {
+        setAllPlans(randomizeArray(ALL_PLANS_ORDERLY))
+    }, [])
 
     return (
         <section className=" pt-[3.125rem]">

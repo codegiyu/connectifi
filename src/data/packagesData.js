@@ -40,37 +40,37 @@ export const internetProviders = [
                 dataOptions: [
                     {
                         benefits: "350MB + 3 Mins + 350MB YT",
-                        price: "N350",
+                        price: 350,
                         duration: "1 week"
                     },
                     {
                         benefits: "600MB + 3 Mins",
-                        price: "N500",
+                        price: 500,
                         duration: "1 week"
                     },
                     {
                         benefits: "750MB + 1 Hr YT Daily",
-                        price: "N500",
+                        price: 500,
                         duration: "1 week"
                     },
                     {
                         benefits: "1GB + 5 Mins",
-                        price: "N700",
+                        price: 700,
                         duration: "1 week"
                     },
                     {
                         benefits: "1.5GB + 10 Mins + 1.4GB YT Night",
-                        price: "N1000",
+                        price: 1000,
                         duration: "1 week"
                     },
                     {
                         benefits: "5GB",
-                        price: "N1500",
+                        price: 1500,
                         duration: "1 week"
                     },
                     {
                         benefits: "5GB",
-                        price: "N2000",
+                        price: 2000,
                         duration: "1 week"
                     },
                 ]
@@ -80,67 +80,67 @@ export const internetProviders = [
                 dataOptions: [
                     {
                         benefits: "1.2GB + 5 Mins + 2GB YT",
-                        price: "N1000",
+                        price: 1000,
                         duration: "1 month"
                     },
                     {
                         benefits: "1.5GB + 5 Mins + 3GB YT",
-                        price: "N1200",
+                        price: 1200,
                         duration: "1 month"
                     },
                     {
                         benefits: "3GB + 5 Mins + 2GB YT",
-                        price: "N1600",
+                        price: 1600,
                         duration: "1 month"
                     },
                     {
                         benefits: "4GB + 10 Mins + 2GB YT",
-                        price: "N2000",
+                        price: 2000,
                         duration: "1 month"
                     },
                     {
                         benefits: "8GB + 15 Mins + 2GB YT",
-                        price: "N3000",
+                        price: 3000,
                         duration: "1 month"
                     },
                     {
                         benefits: "10GB + 20 Mins + 2GB YT",
-                        price: "N3500",
+                        price: 3500,
                         duration: "1 month"
                     },
                     {
                         benefits: "11GB + 20 Mins",
-                        price: "N3500",
+                        price: 3500,
                         duration: "1 month"
                     },
                     {
                         benefits: "12GB + 25 Mins + 2GB YT",
-                        price: "N4000",
+                        price: 4000,
                         duration: "1 month"
                     },
                     {
                         benefits: "13GB + 25 Mins + 2GB",
-                        price: "N4000",
+                        price: 4000,
                         duration: "1 month"
                     },
                     {
                         benefits: "20GB + 25 Mins + 2GB YT",
-                        price: "N5500",
+                        price: 5500,
                         duration: "1 month"
                     },
                     {
                         benefits: "25GB + 25 Mins + 2GB YT",
-                        price: "N6500",
+                        price: 6500,
                         duration: "1 month"
                     },
                     {
                         benefits: "27GB + 25 Mins",
-                        price: "N6500",
+                        price: 6500,
                         duration: "1 month"
                     },
                     {
                         benefits: "40GB + 40 Mins",
-                        price: "N11000",
+                        price: 11000,
                         duration: "1 month"
                     }
                 ]
@@ -218,42 +218,42 @@ export const internetProviders = [
                 dataOptions: [
                     {
                         benefits: "8GB",
-                        price: "N3700",
+                        price: 3700,
                         duration: "1 month"
                     },
                     {
                         benefits: "10GB",
-                        price: "N4200",
+                        price: 4200,
                         duration: "1 month"
                     },
                     {
                         benefits: "15GB",
-                        price: "N5900",
+                        price: 5900,
                         duration: "1 month"
                     },
                     {
                         benefits: "18GB",
-                        price: "N7050",
+                        price: 7050,
                         duration: "1 month"
                     },
                     {
                         benefits: "25GB",
-                        price: "N8250",
+                        price: 8250,
                         duration: "1 month"
                     },
                     {
                         benefits: "35GB",
-                        price: "N11500",
+                        price: 11500,
                         duration: "1 month"
                     },
                     {
                         benefits: "50GB",
-                        price: "N14200",
+                        price: 14200,
                         duration: "1 month"
                     },
                     {
                         benefits: "75GB",
-                        price: "N16700",
+                        price: 16700,
                         duration: "1 month"
                     }
                 ]

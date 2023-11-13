@@ -24,7 +24,7 @@ const PlanSingle = ({providerIcon, networkIndex, packageIndex, packageType, pric
             </h3>
             <p className="w-max flex gap-1 items-end text-[#3F3F3F] text-center">
                 <span className="text-[22px] leading-7 font-semibold">
-                    {`${price}`}
+                    {`₦${price.toLocaleString()}`}
                 </span>
                 <span className="text-base">
                     {` / ${duration}`}
@@ -51,7 +51,7 @@ PlanSingle.propTypes = {
     packageType: PropTypes.string, 
     networkIndex: PropTypes.string, 
     packageIndex: PropTypes.string, 
-    price: PropTypes.string, 
+    price: PropTypes.number, 
     duration: PropTypes.string, 
     benefits: PropTypes.string
 }

@@ -28,15 +28,11 @@ const ComparePackageBlock = () => {
     useEffect(() => {
         if (inputValues.dataPackage) {
             const value = inputValues.dataPackage;
-            setDataOptions(internetProviders[inputValues.network].dataPackages[value]?.dataOptions.map(item => `${item.benefits} - (${item.price})`))
+            setDataOptions(internetProviders[inputValues.network].dataPackages[value]?.dataOptions.map(item => `${item.benefits} - (₦${item.price})`))
         } else {
             setDataOptions([]);
         }
-    }, [inputValues.dataPackage]);
-
-    useEffect(() => {
-        console.log("Inputs: ", inputValues)
-    }, [inputValues])
+    }, [inputValues.dataPackage, inputValues.network]);
 
     return (
         <section className="w-full py-11 px-8 grid gap-6 bg-white rounded-[15px]">

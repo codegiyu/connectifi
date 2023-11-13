@@ -6,8 +6,8 @@ import { Autoplay, Mousewheel } from "swiper/modules";
 const ReviewGroup = ({ arr }) => {
 
     return (
-        <section className="w-full flex flex-nowrap flex-none h-full">
-            <section className="flex flex-nowrap items-stretch gap-9 2xl:gap-14 2xl:justify-center animate-marquee">
+        <section className="w-full flex flex-nowrap flex-none h-full animate-marquee" style={{ animationPlayState: "running" }}>
+            <section className="flex flex-nowrap items-stretch gap-9 2xl:gap-14 2xl:justify-center">
             {/* <Swiper
                 // loop={true}
                 slidesPerView={"auto"}
@@ -34,7 +34,7 @@ const ReviewGroup = ({ arr }) => {
                 ))}
             {/* </Swiper>  */}
             </section>
-            <div className="w-4 sm:w-12 lg:w-16 xl:w-[6.25rem] 2xl:w-40 bg-transparent h-full flex-none"></div>
+            {/* <div className="w-4 sm:w-12 lg:w-16 xl:w-[6.25rem] 2xl:w-40 bg-transparent h-full flex-none"></div> */}
         </section>
     )
 }
