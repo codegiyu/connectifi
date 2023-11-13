@@ -32,7 +32,7 @@ const SelectPaymentOptionModal = ({selectPaymentModalActive, setSelectPaymentMod
         >
             <div
                 ref={modalWrapRef} 
-                className=""
+                className="bg-white"
             >
 
             </div>
