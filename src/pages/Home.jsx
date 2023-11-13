@@ -8,6 +8,7 @@ import Reviews from "../sections/HomePage/Reviews";
 import Cta from "../sections/Cta";
 import GoToTop from "../hooks/GoToTop";
 import WhyChooseUs from "../sections/HomePage/WhyChooseUs";
+import Team from "../sections/HomePage/Team";
 
 const HomePage = () => {
 
@@ -38,6 +39,7 @@ const HomePage = () => {
                     />
                 </section>
                 <Reviews />
+                <Team />
                 <Cta />
             </>
         </MainLayout>

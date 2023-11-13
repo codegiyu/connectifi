@@ -6,6 +6,12 @@ import michael from "../assets/images/michael.png";
 import why1 from "../assets/why-1.svg";
 import why2 from "../assets/why-2.svg";
 import why3 from "../assets/why-3.svg";
+import Esther from "../assets/images/Esther.png";
+import Rejoice from "../assets/images/Rejoice.png";
+import Ife from "../assets/images/Ife.png";
+import Seun from "../assets/images/Seun.png";
+import Abubakar from "../assets/images/Abubakar.png";
+import Eddy from "../assets/images/Eddy.png";
 
 export const whyUsData = [
     {
@@ -109,4 +115,43 @@ export const reviewData = [
         name: "Michael H.",
         title: "Tech Enthusiast"
     }
+]
+
+export const TEAM_DATA = [
+    {
+        name: "Nsofor Esther",
+        role: "Product Manager",
+        image: Esther,
+        smallText: false
+    },
+    {
+        name: "Rejoice Onodu",
+        role: "Product Manager",
+        image: Rejoice,
+        smallText: false
+    },
+    {
+        name: "Adesanya Ifeoluwa",
+        role: "Product Manager",
+        image: Ife,
+        smallText: false
+    },
+    {
+        name: "Seun Moses",
+        role: "Lead UI/UX Designer",
+        image: Seun,
+        smallText: false
+    },
+    {
+        name: "Abubakar Abdullah",
+        role: "UI/UX Designer",
+        image: Abubakar,
+        smallText: false
+    },
+    {
+        name: "Edward-Precious Omegbu",
+        role: "Frontend Developer",
+        image: Eddy,
+        smallText: true
+    },
 ]
