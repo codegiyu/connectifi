@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
-import useNotAvailable from "../hooks/useNotAvailable";
 import RegButton from "./RegButton";
 import useAppStore from "../store/useAppStore";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
-const ProductCard = ({ name, image, description, price, oldPrice, btnText, providerIcon }) => {
+const ProductCard = ({ id, name, image, description, price, oldPrice, providerName, providerIcon }) => {
     const user = useAppStore(state => state.user);
-    const { unavailable } = useNotAvailable();
+    const addToCart = useAppStore(state => state.addToCart);
+    const removeFromCart = useAppStore(state => state.removeFromCart);
+    const isProductInCart = useAppStore(state => state.isProductInCart);
+    const [productInCart, setProductInCart] = useState(isProductInCart(id));
     
     const handleAddToCart = () => {
         if (!user) {
@@ -14,7 +17,18 @@ const ProductCard = ({ name, image, description, price, oldPrice, btnText, provi
             return;
         }
 
-        unavailable();
+        addToCart({ id, name, image, description, price, oldPrice, providerIcon, providerName });
+        setProductInCart(true);
+    }
+    
+    const handleRemoveFromCart = () => {
+        if (!user) {
+            toast.error("Please login to access this feature");
+            return;
+        }
+
+        removeFromCart(id);
+        setProductInCart(false);
     }
 
     return (
@@ -42,19 +56,24 @@ const ProductCard = ({ name, image, description, price, oldPrice, btnText, provi
                 </span>
             </div>
             <div className="mt-6 w-full">
-                <RegButton text={btnText} styles={{ width: "100%" }} clickHandler={handleAddToCart} />
+                <RegButton 
+                    text={productInCart ? "Remove From Cart" : "Add To Cart" } 
+                    styles={{ width: "100%" }} 
+                    clickHandler={productInCart ? handleRemoveFromCart : handleAddToCart} 
+                />
             </div>
         </div>
     )
 }
 
 ProductCard.propTypes = {
+    id: PropTypes.string,
     name: PropTypes.string,
     image: PropTypes.string,
     description: PropTypes.string,
     oldPrice: PropTypes.number,
     price: PropTypes.number,
-    btnText: PropTypes.string,
+    providerName: PropTypes.string,
     providerIcon: PropTypes.string
 }
 

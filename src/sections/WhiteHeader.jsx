@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from "../assets/logo-red.svg";
 import menuOpen from "../assets/menu-open.svg";
 import menuClose from "../assets/menu-close.svg";
@@ -12,6 +12,7 @@ import caretDown from "../assets/caret-down-filled.svg";
 import roundLoading from "../assets/round-loading.svg";
 import profileIcon from "../assets/profile.svg";
 import logoutIcon from "../assets/logout.svg";
+import cartIcon from "../assets/cart.svg";
 
 const WhiteHeader = () => {
     const openAuth = useAppStore(state => state.openAuth);
@@ -19,10 +20,13 @@ const WhiteHeader = () => {
     const isLoading = useAppStore(state => state.isLoading);
     const logoutUser = useAppStore(state => state.logoutUser);
     const user = useAppStore(state => state.user);
+    const numberInCart = useAppStore(state => state.numberInCart);
     const [blockScroll, allowScroll] = useScrollBlock();
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const [userMenuIsOpen, setUserMenuIsOpen] = useState(false);
     const { unavailable } = useNotAvailable();
+
+    const navigate = useNavigate();
 
     const userMenuRef = useRef(null);
     const userMenuBtnRef = useRef(null);
@@ -49,6 +53,11 @@ const WhiteHeader = () => {
     const handleUserMenuClick = () => {
         unavailable();
         closeUserMenu();
+    }
+
+    const goToCart = () => {
+        closeUserMenu();
+        navigate("/cart");
     }
 
     const handleLogout = async () => {
@@ -132,22 +141,34 @@ const WhiteHeader = () => {
                                     </div>
                                 )}
                             </div>
-                            <p className="text-xl leading-[100%] text-[#3F3F3F] font-semibold">
+                            {/* <p className="text-xl leading-[100%] text-[#3F3F3F] font-semibold">
                                 { user.first_name }
-                            </p>
+                            </p> */}
                             <button ref={userMenuBtnRef} className="w-fit bg-transparent border-none outline-none" onClick={userMenuIsOpen ? closeUserMenu : openUserMenu}>
                                 <img src={caretDown} alt="" className="w-6 h-6" />
                             </button>
                             <div 
                                 ref={userMenuRef}
-                                className={`w-[150px] absolute top-[3.625rem] right-0 p-1 rounded-lg shadow-service ${userMenuIsOpen ? "grid" : "hidden"} z-[5]`}
+                                className={`min-w-[150px] w-max absolute top-[3.625rem] right-0 p-3 rounded-lg shadow-reviewBox ${userMenuIsOpen ? "grid" : "hidden"} z-[5]`}
                             >
                                 <p
                                     className="body-text-5 p-2 text-[#3F3F3F] flex items-center gap-2 text-center"
                                     onClick={handleUserMenuClick}
                                 >
                                     <img src={profileIcon} alt="" className="w-[18px]" />
-                                    <span>Profile</span>
+                                    <span className="w-max">{user.first_name}</span>
+                                </p>
+                                <p
+                                    className="body-text-5 p-2 text-[#3F3F3F] flex items-center gap-2 text-center"
+                                    onClick={goToCart}
+                                >
+                                    <img src={cartIcon} alt="" className="w-[18px]" />
+                                    <span>Cart</span>
+                                    <span className="w-6 h-6 bg-bright-blue grid place-items-center rounded-full">
+                                        <span className="text-sm leading-[100%] text-white rounded-full">
+                                            {numberInCart}
+                                        </span>
+                                    </span>
                                 </p>
                                 <p
                                     className="body-text-5 p-2 text-[#F93232] flex items-center gap-2 text-center"

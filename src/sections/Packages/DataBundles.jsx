@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import Select from "../../components/Inputs/Select";
 import PackageInput from "../../components/Inputs/PackageInput";
 import RegButton from "../../components/RegButton";
-import useNotAvailable from "../../hooks/useNotAvailable";
+// import useNotAvailable from "../../hooks/useNotAvailable";
 import { useSearchParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import useAppStore from "../../store/useAppStore";
 import blueArrow from "../../assets/blue-arrow.svg";
+import SelectPaymentOptionModal from "../SelectPaymentOption";
+import BuyNowModal from "../BuyNowModal";
 
 const DataBundles = () => {
     const defaultInputs = { network: "", package: "", option: "", phone: "", renewal: "" };
@@ -18,7 +20,9 @@ const DataBundles = () => {
     const [packages, setPackages] = useState([]);
     const [dataOptions, setDataOptions] = useState([]);
     const [selectedOptionPrice, setSelectedOptionPrice] = useState(0);
-    const { unavailable } = useNotAvailable();
+    const [selectPaymentModalActive, setSelectPaymentModalActive] = useState(false);
+    const [buyNowModalActive, setBuyNowModalActive] = useState(false);
+    // const { unavailable } = useNotAvailable();
 
     const tryItOut = () => {
         const el = document.querySelector("#network-select");
@@ -62,8 +66,11 @@ const DataBundles = () => {
             return;
         }
 
-        console.log(inputValues)
+        console.log(inputValues);
+        setSelectPaymentModalActive(true);
+    }
 
+    const resetInputs = () => {
         setInputValues(defaultInputs);
         setTimeout(() => {
             searchParams.delete("network");
@@ -71,8 +78,6 @@ const DataBundles = () => {
             searchParams.delete("option");
             setSearchParams(searchParams);
         }, 1000)
-
-        unavailable();
     }
 
     useEffect(() => {
@@ -135,8 +140,24 @@ const DataBundles = () => {
         }
     }, [inputValues])
 
+    useEffect(() => {
+        console.log(inputValues.option);
+    }, [inputValues.option])
+
     return (
         <section id="data-bundles" className="p-container py-[7.5rem]">
+            <SelectPaymentOptionModal 
+                selectPaymentModalActive={selectPaymentModalActive}
+                setSelectPaymentModalActive={setSelectPaymentModalActive}
+                setBuyNowModalActive={setBuyNowModalActive}
+                resetInputs={resetInputs}
+            />
+            <BuyNowModal 
+                buyNowModalActive={buyNowModalActive}
+                setBuyNowModalActive={setBuyNowModalActive}
+                selectedOptionPrice={selectedOptionPrice}
+                resetInputs={resetInputs}
+            />
             <section className="w-full grid grid-cols-2">
                 <div className="w-4/5 h-fit grid gap-6">
                     <h2 className="body-text-2 md:heading-3 font-medium lg:heading-2 text-dark-19">
