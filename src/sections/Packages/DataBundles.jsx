@@ -66,7 +66,6 @@ const DataBundles = () => {
             return;
         }
 
-        console.log(inputValues);
         setSelectPaymentModalActive(true);
     }
 
@@ -91,9 +90,6 @@ const DataBundles = () => {
             if (el) {
                 el.scrollIntoView({ behavior: "smooth" });
             }
-
-            
-            console.log(el)
 
             setInputValues(prevState => ({ ...prevState, network }));
             setTimeout(() => {
@@ -132,17 +128,12 @@ const DataBundles = () => {
         if (inputValues.option && inputValues.package && inputValues.network) {
             const { option, package: dataPackage, network } = inputValues;
             const price = internetProviders[network].dataPackages[dataPackage].dataOptions.find(item => item.benefits === option.split(" - ")[0])?.price;
-            console.log(price);
 
             setSelectedOptionPrice(price);
         } else {
             setSelectedOptionPrice(0);
         }
     }, [inputValues])
-
-    useEffect(() => {
-        console.log(inputValues.option);
-    }, [inputValues.option])
 
     return (
         <section id="data-bundles" className="p-container py-[7.5rem]">

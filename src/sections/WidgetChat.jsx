@@ -32,7 +32,6 @@ const WidgetChat = () => {
 
     const sendMessage = async (e) => {
         e.preventDefault();
-        console.log("user: ", user)
 
         const messageObj = {
             isUser: true,
@@ -48,7 +47,7 @@ const WidgetChat = () => {
         
         const res = await sendPrompt(payload);
 
-        console.log(res);
+        console.log({sendMessageRes: res});
     }
 
     useEffect(() => {

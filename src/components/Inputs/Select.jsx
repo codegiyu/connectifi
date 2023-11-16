@@ -55,7 +55,6 @@ const Select = ({
         e.preventDefault();
         e.stopPropagation();
         if (e.code === '13') {
-            console.log("13")
           target.click();
         }
     };
@@ -144,7 +143,7 @@ const Select = ({
                         value={value}
                         disabled={disabled}
                         style={inputStyles}
-                        onChange={(e) => {console.log("Target value: ", e.target.value); changeHandler ? changeHandler(e) : null}}
+                        onChange={(e) => {changeHandler ? changeHandler(e) : null}}
                         onFocus={handleFocus}
                         onBlur={handleBlur}
                         onMouseEnter={handleMouseEnter}
