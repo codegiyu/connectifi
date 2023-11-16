@@ -52,9 +52,9 @@ const ComparePackageBlock = () => {
             />
             <div className={`w-full aspect-[0.85] ${dataOptions.length ? "bg-[#F2F2F2]" : "bg-bright-blue"} rounded-[15px] grid relative overflow-y-auto`}>
                 {dataOptions.length ? (
-                    <div className="w-full p-5 grid gap-5">
+                    <div className="w-full h-fit p-5 grid gap-5">
                         {dataOptions.map((item,idx) => (
-                            <span className="w-full body-text-6 md:body-text-5 leading-5 text-grey-89" key={idx}>
+                            <span className="w-full h-fit body-text-6 md:body-text-5 leading-5 text-grey-89" key={idx}>
                                 {item}
                             </span>
                         ))}

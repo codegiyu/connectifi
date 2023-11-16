@@ -50,8 +50,8 @@ const AuthLayout = () => {
             className="w-screen h-screen fixed top-0 left-0 z-[90] bg-[#0000009f] grid place-items-center" 
             onClick={checkClickPosition}
         >
-            <section className="w-[90%] xl:w-[1200px] h-[80%] bg-white grid grid-cols-2 relative" ref={authSectionRef}>
-                <div className="w-full h-full relative z-[95] grid place-items-center p-16 overflow-hidden">
+            <section className="w-[90%] xl:w-[1200px] h-[80%] bg-white grid lg:grid-cols-2 relative" ref={authSectionRef}>
+                <div className="w-full h-full relative z-[95] hidden lg:grid place-items-center p-16 overflow-hidden">
                     <img src={authImg} alt="" className="max-h-[90%]" />
                 </div>
 

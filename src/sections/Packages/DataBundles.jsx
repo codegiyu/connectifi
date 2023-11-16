@@ -15,6 +15,7 @@ const DataBundles = () => {
     const defaultInputs = { network: "", package: "", option: "", phone: "", renewal: "" };
 
     const user = useAppStore(state => state.user);
+    const openAuth = useAppStore(state => state.openAuth);
     const [searchParams, setSearchParams] = useSearchParams();
     const [inputValues, setInputValues] = useState(defaultInputs);
     const [packages, setPackages] = useState([]);
@@ -62,6 +63,7 @@ const DataBundles = () => {
         }
 
         if (!user) {
+            openAuth();
             toast.error("Please log in to access this feature");
             return;
         }
@@ -149,8 +151,8 @@ const DataBundles = () => {
                 selectedOptionPrice={selectedOptionPrice}
                 resetInputs={resetInputs}
             />
-            <section className="w-full grid grid-cols-2">
-                <div className="w-4/5 h-fit grid gap-6">
+            <section className="w-full grid lg:grid-cols-2 gap-12 lg:gap-0">
+                <div className="w-full lg:w-4/5 h-fit grid gap-6">
                     <h2 className="body-text-2 md:heading-3 font-medium lg:heading-2 text-dark-19">
                         Data Bundles
                     </h2>

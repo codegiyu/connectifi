@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const ProductCard = ({ id, name, image, description, price, oldPrice, providerName, providerIcon }) => {
     const user = useAppStore(state => state.user);
+    const openAuth = useAppStore(state => state.openAuth);
     const addToCart = useAppStore(state => state.addToCart);
     const removeFromCart = useAppStore(state => state.removeFromCart);
     const isProductInCart = useAppStore(state => state.isProductInCart);
@@ -13,6 +14,7 @@ const ProductCard = ({ id, name, image, description, price, oldPrice, providerNa
     
     const handleAddToCart = () => {
         if (!user) {
+            openAuth();
             toast.error("Please login to access this feature");
             return;
         }
@@ -23,6 +25,7 @@ const ProductCard = ({ id, name, image, description, price, oldPrice, providerNa
     
     const handleRemoveFromCart = () => {
         if (!user) {
+            openAuth();
             toast.error("Please login to access this feature");
             return;
         }
