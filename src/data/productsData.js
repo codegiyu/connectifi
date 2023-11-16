@@ -17,114 +17,97 @@ import { providerImages } from "./packagesData";
 
 export const bestDeals = [
     {
+        id:"0u4nh2o4",
         image: turbo5gWhite,
         name: "5g Turbo Router",
         description: "Fast browsing and download speeds",
         price: 15500,
         providerIcon: providerImages["Airtel"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        oldPrice: 0,
+        providerName: "Airtel"
     },
     {
+        id:"noi099fn",
         image: bluemifi,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
         price: 8000,
         providerIcon: providerImages["MTN"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        oldPrice: 0,
+        providerName: "MTN"
     },
     {
+        id:"q39r08fiai",
         image: mifi5gVoice,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
         price: 25000,
         providerIcon: providerImages["Airtel"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        oldPrice: 0,
+        providerName: "Airtel"
     },
     {
+        id:"nkbknfo2039",
         image: usbDongle,
         name: "USB Hotspot Dongle",
         description: "Fast browsing and download speeds",
         price: 11500,
-        providerIcon: providerImages["ipNX"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        providerIcon: providerImages["Airtel"],
+        oldPrice: 0,
+        providerName: "Airtel"
     },
     {
+        id:"38rhfa9p93",
         image: black5g,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
         price: 18500,
         providerIcon: providerImages["Smile"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        oldPrice: 0,
+        providerName: "Smile"
     },
     {
+        id:"nw9u00w8292",
         image: g4mifi,
         name: "4g Lite Mifi",
         description: "A wireless, broadband internet",
         price: 10500,
         providerIcon: providerImages["MTN"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        oldPrice: 0,
+        providerName: "MTN"
     },
     {
+        id:"09u2nfia97g",
         image: turbo5g,
         name: "5g Turbo Router",
         description: "Fast browsing and download speeds",
         price: 12000,
         providerIcon: providerImages["Airtel"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        oldPrice: 0,
+        providerName: "Airtel"
     },
     {
+        id:"237buiaz98",
         image: tetlink,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
         price: 22500,
-        providerIcon: providerImages["ipNX"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        providerIcon: providerImages["Smile"],
+        oldPrice: 0,
+        providerName: "Smile"
     },
     {
+        id:"648yibiajso",
         image: whitemifi,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
         price: 9000,
         providerIcon: providerImages["MTN"],
-        oldPrice: "",
-        btnText: "Add To Cart"
+        oldPrice: 0,
+        providerName: "MTN"
     },
 ]
 
-// export const featuredProducts = [
-//     {
-//         image: usbDongle,
-//         name: "USB Hotspot Dongle",
-//         description: "Fast browsing and download speeds",
-//         price: 18500,
-//         oldPrice: 25200,
-//         btnText: "Add to Cart"
-//     },
-//     {
-//         image: bluemifi,
-//         name: "5g Mifi + Voice",
-//         description: "A wireless, broadband internet",
-//         price: 22500,
-//         oldPrice: 30000,
-//         btnText: "Add to Cart"
-//     },
-//     {
-//         image: g4mifi,
-//         name: "4g Lite Mifi",
-//         description: "A wireless, broadband internet",
-//         price: 12500,
-//         oldPrice: 18600,
-//         btnText: "Add to Cart"
-//     },
-// ]
 
 // export const topDeals = [
 //     deal1,

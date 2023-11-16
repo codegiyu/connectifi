@@ -45,7 +45,8 @@ const createAuthSlice = (set, get) => ({
                     phone_number: userObj.phone_number,
                     photo: userObj.photo,
                     created_at: userObj.created_at,
-                    modified_at: userObj.modified_at
+                    modified_at: userObj.modified_at,
+                    walletBalance: userObj.walletBalance || 0
                 }
 
                 console.log("User data:", userObj);
@@ -86,7 +87,8 @@ const createAuthSlice = (set, get) => ({
                 phone_number: "",
                 photo: "",
                 created_at: serverTimestamp(),
-                modified_at: null
+                modified_at: null,
+                walletBalance: 0
             }
             await setDoc(userDocRef, userObj)
             
@@ -124,7 +126,8 @@ const createAuthSlice = (set, get) => ({
                     phone_number: userObj.phone_number,
                     photo: userObj.photo,
                     created_at: userObj.created_at,
-                    modified_at: userObj.modified_at
+                    modified_at: userObj.modified_at,
+                    walletBalance: userObj.walletBalance || 0
                 }
 
                 console.log("User data:", userObj);
@@ -140,7 +143,8 @@ const createAuthSlice = (set, get) => ({
                     phone_number: user.phoneNumber || "",
                     photo: user.photoURL || "",
                     created_at: user.metadata.creationTime || null,
-                    modified_at: null
+                    modified_at: null,
+                    walletBalance: 0
                 }
 
                 await setDoc(userDocRef, userObj);
@@ -247,16 +251,17 @@ const createAuthSlice = (set, get) => ({
             set({ isLoading: false })
         }
     },
-    updateUser: async (obj) => {
+    updateUser: async (arr) => {
         try {
-            if (get().isLoading === true || obj.changes.length === 0) return false;
+            if (get().isLoading === true || arr.length === 0) return false;
             set({ isLoading: true });
             
-            const userRef = doc(db, `users`, obj.userid);
+            const userid = get().user.userid;
+            const userRef = doc(db, `users`, userid);
             const userDetailsChanges = {};
 
             // Generate changes array
-            for (const {property, newValue} of obj.changes) {
+            for (const {property, newValue} of arr) {
                 userDetailsChanges[property] = newValue;
             }
 
@@ -265,7 +270,7 @@ const createAuthSlice = (set, get) => ({
             // Set the required field to the new value
             await updateDoc(userRef, userDetailsChanges);
 
-            const userDocRef = doc(db, "users", obj.userid);
+            const userDocRef = doc(db, "users", userid);
             const userDocSnap = await getDoc(userDocRef);
 
             if (userDocSnap.exists()) {
@@ -279,7 +284,8 @@ const createAuthSlice = (set, get) => ({
                     phone_number: userObj.phone_number,
                     photo: userObj.photo,
                     created_at: userObj.created_at,
-                    modified_at: userObj.modified_at
+                    modified_at: userObj.modified_at,
+                    walletBalance: userObj.walletBalance || 0
                 }
 
                 console.log("User data:", userObj);

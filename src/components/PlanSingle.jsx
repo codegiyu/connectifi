@@ -10,7 +10,7 @@ const PlanSingle = ({providerIcon, networkIndex, packageIndex, packageType, pric
         setSearchParams({
             network: networkIndex,
             packageType: packageIndex,
-            option: benefits 
+            option: `${benefits} - (₦${price})` 
         })
     }
 
