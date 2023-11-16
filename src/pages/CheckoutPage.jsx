@@ -144,7 +144,7 @@ const CheckoutPage = () => {
                     </div>
                 </section>
 
-                <section className="w-full grid grid-cols-2 items-stretch gap-5">
+                <section className="w-full grid lg:grid-cols-2 items-stretch gap-6 lg:gap-5">
                     <section className="w-full bg-white rounded-[24px] pt-10 pb-12 px-7 relative grid gap-6">
                         <div className="grid gap-2">
                             <h2 className="text-[#3F3F3F] font-bold body-text-2xl md:text-3xl">
@@ -241,7 +241,7 @@ const CheckoutPage = () => {
                                 <div
                                     className={`w-full h-full bg-transparent flex-none grid py-4 px-4 overflow-y-auto`}
                                 >
-                                    <div className="w-full h-full flex flex-col justify-between bg-white overflow-y-auto rounded-[24px] pt-4 ">
+                                    <div className="w-full h-full flex flex-col gap-4 lg:gap-0 justify-between bg-white overflow-y-auto rounded-[24px] pt-4 ">
                                         <div className="">
                                             <h6 className="text-sm md:text-xl leading-[18px] md:leading-[120%] text-grey-89 text-center">
                                                 Select one of the buttons below to fund your wallet.

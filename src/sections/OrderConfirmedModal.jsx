@@ -40,7 +40,7 @@ const OrderConfirmedModal = ({ orderConfirmedModalActive, setOrderConfirmedModal
                 className="bg-white w-[90%] md:w-[500px] lg:w-[750px] rounded-[24px] overflow-hidden"
             >
                 <div className="w-full px-4 py-[3.125rem] grid gap-6 justify-center items-center">
-                    <img src={confirmed} alt="" className="w-[75px] md:w-[150px]" />
+                    <img src={confirmed} alt="" className="w-[75px] md:w-[150px] mx-auto" />
                     <p className="text-[#3F3F3F] font-medium text-2xl md:text-4xl leading-[100%]">
                         Order confirmed
                     </p>

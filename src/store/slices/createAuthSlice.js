@@ -301,7 +301,7 @@ const createAuthSlice = (set, get) => ({
             
             await signOut(auth);
 
-            set({ user: null });
+            set({ user: null, cart: [], cartTotal: 0, numberInCart: 0 });
             toast.success("Logged out successfully");
             return true;
         } catch (err) {

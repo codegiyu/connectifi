@@ -8,7 +8,7 @@ const ContactDetails = () => {
 
     return (
         <section className="p-container-narrow">
-            <section className="w-full bg-white py-[3.125rem] lg:py-[6.25rem] px-[45px] lg:px-[90px] grid gap-7 lg:gap-[3.125rem] rounded-[20px] -translate-y-10 xl:-translate-y-12">
+            <section className="w-full bg-white py-[3.125rem] lg:py-[6.25rem] px-4 md:px-[45px] lg:px-[90px] grid gap-7 lg:gap-[3.125rem] rounded-[20px] -translate-y-10 xl:-translate-y-12">
                 <section className="w-full grid gap-2 text-center">
                     <h2 className="body-text-2 md:heading-3 font-medium lg:heading-2 text-dark-19">
                         Contact Us

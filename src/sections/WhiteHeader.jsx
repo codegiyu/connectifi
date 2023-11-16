@@ -228,6 +228,22 @@ const WhiteHeader = () => {
                                                 Products & Services
                                             </NavLink>
                                         </li>
+                                        <li className='w-full py-[0.625rem] pl-2 pr-1 border-b-[0.5px] border-[#AEAEAE]'>
+                                            <NavLink to="/cart" className={`text-sm md:text-xl leading-[18px] md:leading-[100%] hover:text-[#17374D] w-full h-fit
+                                                text-dark-19 lg:text-grey-89`}>
+                                                <p
+                                                    className="flex items-center gap-2 pl-[10px]"
+                                                    onClick={goToCart}
+                                                >
+                                                    <span>Cart</span>
+                                                    <span className="w-6 h-6 bg-bright-blue grid place-items-center rounded-full">
+                                                        <span className="text-sm leading-[100%] text-white rounded-full">
+                                                            {numberInCart}
+                                                        </span>
+                                                    </span>
+                                                </p>
+                                            </NavLink>
+                                        </li>
                                     </ul>
                                 </nav>
                                 {!user ? (
