@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import WhiteHeader from "../sections/WhiteHeader";
 import AuthLayout from "./AuthLayout";
 import useAppStore from "../store/useAppStore";
@@ -13,10 +13,6 @@ const CartPage = () => {
     const cartTotal = useAppStore(state => state.cartTotal);
 
     const navigate = useNavigate();
-
-    useEffect(() => {
-        console.log(cart)
-    }, [cart])
 
     return (
         <div className="bg-[#F6F6F6] min-h-screen">

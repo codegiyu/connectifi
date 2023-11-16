@@ -1,17 +1,9 @@
 import TitleWithBtn from "../../components/TitleWithBtn";
 import { bestDeals } from "../../data/productsData";
 import ProductCard from "../../components/ProductCard";
-import { useEffect } from "react";
-import useAppStore from "../../store/useAppStore";
 
 const BestDeals = () => {
-    const cart = useAppStore(state => state.cart);
-    const numberInCart = useAppStore(state => state.numberInCart);
-    
 
-    useEffect(() => {
-        console.log({cart, numberInCart})
-    }, [cart, numberInCart])
     return (
         <section id="available-products" className="p-container grid gap-[3.125rem]">
             <TitleWithBtn heading="Available Products" />

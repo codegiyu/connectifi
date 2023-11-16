@@ -26,7 +26,6 @@ const createAuthSlice = (set, get) => ({
 
             // Use firebase auth to check if email and password are correct and get user auth data
             const data = await signInWithEmailAndPassword(auth, obj.email, obj.password);
-            console.log(data);
             const user = data.user;
 
             // Use user id from auth data to retrieve their data from the users collection
@@ -49,11 +48,10 @@ const createAuthSlice = (set, get) => ({
                     walletBalance: userObj.walletBalance || 0
                 }
 
-                console.log("User data:", userObj);
                 set({ user: thisUser });
                 return true;
             } else {
-                console.log("No such user!");
+                console.error("No such user!");
                 toast.error("User does not exist");
                 return false;
             }
@@ -72,8 +70,7 @@ const createAuthSlice = (set, get) => ({
             set({ isLoading: true })
 
             // Create user in firebase auth
-            const data = await createUserWithEmailAndPassword(auth, obj.email, obj.password)
-            console.log(data)
+            const data = await createUserWithEmailAndPassword(auth, obj.email, obj.password);
             const user = data.user;
 
             const userDocRef = doc(db, "users", user.uid);
@@ -109,12 +106,13 @@ const createAuthSlice = (set, get) => ({
 
             googleProvider.addScope("profile");
             googleProvider.addScope("email");
+            
             const data = await signInWithPopup(auth, googleProvider);
             const user = data.user;
-
+           
             const userDocRef = doc(db, "users", user.uid);
             const userDocSnap = await getDoc(userDocRef);
-
+            
             if (userDocSnap.exists()) {
                 const userObj = userDocSnap.data();
 
@@ -130,11 +128,8 @@ const createAuthSlice = (set, get) => ({
                     walletBalance: userObj.walletBalance || 0
                 }
 
-                console.log("User data:", userObj);
                 set({ user: thisUser });
             } else {
-                console.log("user: ", user);
-
                 const userObj = {
                     first_name: user.displayName?.split(" ")[0] || "",
                     last_name: user.displayName?.split(" ")?.slice(1).join(" ") || "",
@@ -155,8 +150,8 @@ const createAuthSlice = (set, get) => ({
 
             return true;
         } catch (err) {
-            console.error(err)
-            toast.error(err.message)
+            console.error(err);
+            toast.error(err.message);
             return false;
         } finally {
             set({ isLoading: false })
@@ -167,7 +162,6 @@ const createAuthSlice = (set, get) => ({
             set({ isLoading: true });
 
             const user = auth.currentUser;
-            console.log(user);
 
             if (user) {
                 await sendEmailVerification(user, actionCodeSettings);
@@ -288,7 +282,6 @@ const createAuthSlice = (set, get) => ({
                     walletBalance: userObj.walletBalance || 0
                 }
 
-                console.log("User data:", userObj);
                 set({ user: thisUser });
             }
 

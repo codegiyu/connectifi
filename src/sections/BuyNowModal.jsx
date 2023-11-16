@@ -68,10 +68,6 @@ const BuyNowModal = ({ buyNowModalActive, setBuyNowModalActive, selectedOptionPr
         }
     }, [balance, selectedOptionPrice])
 
-    useEffect(() => {
-        console.log({balance});
-    }, [balance])
-
     if (!buyNowModalActive) return null;
     return (
         <section 

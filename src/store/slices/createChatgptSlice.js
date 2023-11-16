@@ -25,8 +25,6 @@ const createChatgptSlice = (set, get) => ({
         try {
             if (get().gptLoading === true) return false;
             set({ gptLoading: true });
-            // console.log(openai)
-            // console.log(obj)
 
             set({ sessionMessages: obj.messages });
 
