@@ -78,8 +78,8 @@ const BuyNowModal = ({ buyNowModalActive, setBuyNowModalActive, selectedOptionPr
                 ref={modalWrapRef} 
                 className="bg-white w-[95%] md:w-[550px] lg:w-[775px] rounded-[0px] relative overflow-hidden"
             >
-                <div className="flex gap-9 items-center px-12 py-10">
-                    <div className="w-[6.25rem] h-[6.25rem] rounded-full overflow-hidden">
+                <div className="flex gap-9 items-center px-4 md:px-12 py-10">
+                    <div className="w-[6.25rem] h-[6.25rem] flex-none rounded-full overflow-hidden">
                         {user.photo ? (
                             <img src={user.photo} alt={getInitials(user.first_name || "", user.last_name || "")} className="w-full h-full object-cover rounded-full" />
                         ) : (
@@ -123,20 +123,20 @@ const BuyNowModal = ({ buyNowModalActive, setBuyNowModalActive, selectedOptionPr
                         ${selectedTab === "Buy Now" ? "-translate-x-[100%]" : "translate-x-0"}`}
                     >
                         <div
-                            className={`w-full h-full bg-transparent flex-none grid py-12 px-12 overflow-y-auto`}
+                            className={`w-full h-full bg-transparent flex-none grid py-12 px-4 md:px-12 overflow-y-auto`}
                         >
                             <div className="w-full h-full flex flex-col justify-between bg-white overflow-y-auto rounded-[24px] px-[14px] pt-7 pb-12">
-                                <div className="">
+                                <div className="mb-4">
                                     <h6 className="text-[#3F3F3F] font-medium body-text-6 md:body-text-3 p-[0_14px_16px] border-b border-b-[#AEAEAE]">
                                         Select one of the buttons below to fund your wallet.
                                     </h6>
                                 </div>
-                                <div className="w-full px-[14px] flex flex-wrap justify-center gap-y-10 gap-x-11">
+                                <div className="w-full px-[14px] flex flex-wrap justify-center gap-5 md:gap-7 lg:gap-y-10 lg:gap-x-11">
                                     {fundingOptions.map((item,idx) => (
                                         <button 
                                             key={idx} 
                                             data-amount={item}
-                                            className="w-[120px] p-4 rounded-[50px] bg-[#CCE3F2] text-[#292D32] text-xl leading-6 font-medium"
+                                            className="w-[100px] lg:w-[120px] p-4 rounded-[50px] bg-[#CCE3F2] text-[#292D32] text-xl leading-6 font-medium"
                                             onClick={addToWallet}    
                                         >
                                             {item.toLocaleString()}
@@ -146,7 +146,7 @@ const BuyNowModal = ({ buyNowModalActive, setBuyNowModalActive, selectedOptionPr
                             </div>
                         </div>
                         <div
-                            className={`w-full h-full bg-transparent flex-none grid py-12 px-12 overflow-y-auto`}
+                            className={`w-full h-full bg-transparent flex-none grid py-12 px-4 md:px-12 overflow-y-auto`}
                         >
                             <div className="w-full h-full flex flex-col justify-between bg-white overflow-y-auto rounded-[24px] px-[14px] pt-7 pb-12">
                                 <div className="">

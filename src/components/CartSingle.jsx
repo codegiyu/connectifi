@@ -21,15 +21,15 @@ const CartSingle = ({ id, name, description, image, numberOfItems, subTotal, pro
     }, [numberOfItems])
 
     return (
-        <div className="w-full pt-8 pb-6 flex justify-between">
+        <div className="w-full pt-8 pb-6 flex flex-col sm:flex-row gap-10 sm:gap-0 justify-between">
             <div className="w-max grid gap-6">
-                <div className="w-max flex gap-4">
+                <div className="w-max flex flex-col sm:flex-row gap-4">
                     <img src={image} alt="" className="w-[175px]" />
                     <div className="w-max grid">
-                        <h3 className="body-text-2 md:heading-3-medium text-[#3F3F3F]">
+                        <h3 className="body-text-2 lg:heading-3-medium text-[#3F3F3F]">
                             {name}
                         </h3>
-                        <span className="text-base md:text-[22.67px] text-[#898989] font-normal leading-[27px] mt-2 mb-4">
+                        <span className="text-base lg:text-[22.67px] text-[#898989] font-normal leading-[27px] mt-2 mb-4">
                             {description}
                         </span>
                         <img src={providerIcon} alt="" className="h-9" />
@@ -39,8 +39,8 @@ const CartSingle = ({ id, name, description, image, numberOfItems, subTotal, pro
                     <img src={remove} alt="" className="w-11 h-11" />
                 </button>
             </div>
-            <div className="w-max grid gap-9">
-                <h3 className="body-text-2 md:heading-3-medium text-[#3F3F3F] font-bold">
+            <div className="w-full sm:w-max flex items-center justify-between sm:grid sm:items-start sm:justify-start gap-9">
+                <h3 className="body-text-2 lg:heading-3-medium text-[#3F3F3F] font-bold">
                     {`₦ ${subTotal.toLocaleString()}`}
                 </h3>
                 <div className="w-max flex items-center gap-4">
@@ -51,7 +51,7 @@ const CartSingle = ({ id, name, description, image, numberOfItems, subTotal, pro
                     >
                         <img src={minus} alt="" className="w-6 h-6" />
                     </button>
-                    <span className="text-[#3F3F3F] font-bold body-text-6 md:body-text-3">
+                    <span className="text-[#3F3F3F] font-bold body-text-6 lg:body-text-3">
                         {numberOfItems}
                     </span>
                     <button

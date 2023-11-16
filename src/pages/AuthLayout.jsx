@@ -61,12 +61,12 @@ const AuthLayout = () => {
                         ${activeAuthScreen === "register" ? "-translate-x-[100%]" : "translate-x-0"}`}
                     >
                         <div
-                            className={`w-full h-full bg-transparent flex-none grid pb-12 px-20 overflow-y-auto`}
+                            className={`w-full h-full bg-transparent flex-none grid pb-12 px-4 sm:px-10 md:px-20 overflow-y-auto custom-scrollbar`}
                         >
                             <LoginForm topRef={loginTopRef} />
                         </div>
                         <div
-                            className={`w-full h-full bg-transparent flex-none grid pb-12 px-20 overflow-y-auto`}
+                            className={`w-full h-full bg-transparent flex-none grid pb-12 px-4 sm:px-10 md:px-20 overflow-y-auto custom-scrollbar`}
                         >
                             <RegisterForm topRef={registerTopRef} />
                         </div>

@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const Hero = ({ heading, boldHeading = true, headingWidth, textWidth, text, heroImg, bothHalvesCentered = true, children, sideIcon = null }) => {
 
     return (
-        <section className={`z-0 bg-[#F6F6F6] relative`}>
+        <section className={`z-0 bg-[#F6F6F6] relative mt-[12rem] md:mt-[8rem] lg:mt-0`}>
             <section className="w-full pt-16 md:pt-24 lg:pt-0">
                 <section
                     className={`${bothHalvesCentered ? "" : "pt-5"} z-[2] relative p-container grid grid-cols-1 \

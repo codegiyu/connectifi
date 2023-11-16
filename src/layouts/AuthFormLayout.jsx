@@ -55,22 +55,22 @@ const AuthFormLayout = ({ heading, text, children, submitHandler, bottomText, bo
                 <span className="w-full h-[0.5px] flex-1 bg-white"></span>
             </div>
 
-            <div className="w-full flex items-center justify-center gap-6">
+            <div className="w-full flex flex-col md:flex-row lg:flex-col xl:flex-row items-center justify-center gap-6">
                 <button 
                     onClick={handleGoogleAuthProcess}
-                    className="w-fit p-4 rounded-lg border border-white flex items-center justify-center gap-[10px]"
+                    className="w-full md:w-fit lg:w-[250px] xl:w-fit p-4 rounded-lg border border-white flex items-center justify-center gap-[10px]"
                 >
                     <img src={google} alt="" className="w-[22px] h-[22px]" />
-                    <span className="text-white text-xl leading-5 ">
+                    <span className="text-white text-[17px] leading-[20px] ">
                         {`Sign ${activeAuthScreen === "register" ? "up" : "in"} with Google`}
                     </span>
                 </button>
                 <button 
                     onClick={unavailable}
-                    className="w-fit p-4 rounded-lg border border-white flex items-center justify-center gap-[10px]"
+                    className="w-full md:w-fit lg:w-[250px] xl:w-fit p-4 rounded-lg border border-white flex items-center justify-center gap-[10px]"
                 >
                     <img src={facebook} alt="" className="w-[22px] h-[22px]" />
-                    <span className="text-white text-xl leading-5 ">
+                    <span className="text-white text-[17px] leading-[20px] ">
                         {`Sign ${activeAuthScreen === "register" ? "up" : "in"} with Facebook`}
                     </span>
                 </button>

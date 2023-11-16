@@ -140,4 +140,50 @@
   .select-wrap .options-dropdown {
     @apply appearance-none w-full max-h-[250px] overflow-y-auto rounded-[5px] border-[0.5px]  bg-white shadow-reviewBox box-border;
   }
+
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 7px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #b3b7bd;
+    border-radius: 5px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #c4c4c4;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  /* For Firefox */
+  .custom-scrollbar::-moz-scrollbar {
+    width: 7px;
+  }
+  .custom-scrollbar::-moz-scrollbar-thumb {
+    background-color: #b3b7bd;
+    border-radius: 5px;
+  }
+  .custom-scrollbar::-moz-scrollbar-thumb:hover {
+    background-color: #c4c4c4;
+  }
+  .custom-scrollbar::-moz-scrollbar-track {
+    background-color: transparent;
+  }
+
+  /* For Other Browsers */
+  .custom-scrollbar::-ms-scrollbar {
+    width: 7px;
+  }
+  .custom-scrollbar::-ms-scrollbar-thumb {
+    background-color: #b3b7bd;
+    border-radius: 5px;
+  }
+  .custom-scrollbar::-ms-scrollbar-thumb:hover {
+    background-color: #c4c4c4;
+  }
+  .custom-scrollbar::-ms-scrollbar-track {
+    background-color: transparent;
+  }
 }
