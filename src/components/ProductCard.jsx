@@ -33,6 +33,7 @@ const ProductCard = ({ id, name, image, description, price, oldPrice, providerNa
         removeFromCart(id);
         setProductInCart(false);
     }
+    console.log({providerName})
 
     return (
         <div className="w-full md:w-[320px] lg:w-full pt-6 px-10 pb-12 flex-none grid gap-[30px] rounded-[20px] bg-white">
@@ -41,7 +42,7 @@ const ProductCard = ({ id, name, image, description, price, oldPrice, providerNa
             </div>
             <div className="grid gap-4 w-full text-center">
                 <div className="w-full grid justify-items-center gap-3">
-                    <img src={providerIcon} alt="" className={`${providerName === "Spectranet" ? "w-[75%]" : "h-[30px]"}`} />
+                    <img src={providerIcon} alt="" className={`${providerName === "Spectranet" ? "w-[40%]" : "h-[30px]"}`} />
                     <h6 className="body-text-2 md:heading-3-medium text-[#3F3F3F]">
                         {name}
                     </h6>

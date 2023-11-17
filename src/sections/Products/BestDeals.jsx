@@ -17,6 +17,7 @@ const BestDeals = () => {
                             name={item.name}
                             description={item.description}
                             providerIcon={item.providerIcon}
+                            providerName={item.providerName}
                             price={item.price}
                             oldPrice={item.oldPrice}
                             btnText={item.btnText}

@@ -101,7 +101,7 @@ export const bestDeals = [
         image: whitemifi,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
-        price: 9000,
+        price: 15000,
         providerIcon: providerImages["Spectranet"],
         oldPrice: 0,
         providerName: "Spectranet"
