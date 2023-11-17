@@ -52,9 +52,9 @@ export const bestDeals = [
         name: "USB Hotspot Dongle",
         description: "Fast browsing and download speeds",
         price: 11500,
-        providerIcon: providerImages["Airtel"],
+        providerIcon: providerImages["Smile"],
         oldPrice: 0,
-        providerName: "Airtel"
+        providerName: "Smile"
     },
     {
         id:"38rhfa9p93",
@@ -62,16 +62,16 @@ export const bestDeals = [
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
         price: 18500,
-        providerIcon: providerImages["Smile"],
+        providerIcon: providerImages["Airtel"],
         oldPrice: 0,
-        providerName: "Smile"
+        providerName: "Airtel"
     },
     {
         id:"nw9u00w8292",
         image: g4mifi,
         name: "4g Lite Mifi",
         description: "A wireless, broadband internet",
-        price: 10500,
+        price: 7500,
         providerIcon: providerImages["MTN"],
         oldPrice: 0,
         providerName: "MTN"
@@ -91,7 +91,7 @@ export const bestDeals = [
         image: tetlink,
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
-        price: 22500,
+        price: 26500,
         providerIcon: providerImages["Smile"],
         oldPrice: 0,
         providerName: "Smile"
@@ -102,12 +102,11 @@ export const bestDeals = [
         name: "5g Mifi + Voice",
         description: "A wireless, broadband internet",
         price: 9000,
-        providerIcon: providerImages["MTN"],
+        providerIcon: providerImages["Spectranet"],
         oldPrice: 0,
-        providerName: "MTN"
+        providerName: "Spectranet"
     },
 ]
-
 
 // export const topDeals = [
 //     deal1,
