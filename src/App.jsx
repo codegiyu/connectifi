@@ -17,8 +17,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/packages" element={<PackagesPage />} />
-          <Route path="/products-and-services" element={<ProductsPage />} />
+          <Route path="packages" element={<PackagesPage />} />
+          <Route path="products-and-services" element={<ProductsPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/cart" element={<CartPage />} />
