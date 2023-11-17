@@ -118,7 +118,7 @@ const DataBundles = () => {
         if (inputValues.package) {
             const value = inputValues.package;
             setInputValues((prevInputs) => ({ ...prevInputs, option: "" }));
-            setDataOptions(internetProviders[inputValues.network].dataPackages[value]?.dataOptions.map(item => (
+            setDataOptions(internetProviders[inputValues.network].dataPackages[value]?.dataOptions.reverse().map(item => (
                 { text: `${item.benefits} - (₦${item.price})`, value: `${item.benefits} - (₦${item.price})` }
             )))
         } else {
