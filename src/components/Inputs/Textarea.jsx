@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Textarea = ({ label, name, value, changeHandler, rows = 3 }) => {
+const Textarea = ({ label, name, value, changeHandler, rows = 3, ...props }) => {
 
     return (
         <label className="w-full grid gap-4">
@@ -14,6 +14,7 @@ const Textarea = ({ label, name, value, changeHandler, rows = 3 }) => {
                 className="w-full body-text-5 md:body-text-3 placeholder:text-grey-89 text-dark-19 p-4 bg-white border \
                 border-[#AEAEAE] rounded-[10px] focus:outline-none"
                 onChange={changeHandler}
+                {...props}
             >
 
             </textarea>

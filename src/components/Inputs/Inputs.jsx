@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Input = ({ label, name, value, type = "text", changeHandler, placeholder = "" }) => {
+const Input = ({ label, name, value, type = "text", changeHandler, placeholder = "", ...props }) => {
 
     return (
         <label className="w-full grid gap-4">
@@ -15,6 +15,7 @@ const Input = ({ label, name, value, type = "text", changeHandler, placeholder =
                 className="w-full body-text-5 md:body-text-3 placeholder:text-grey-89 text-dark-19 p-4 bg-white border \
                 border-[#AEAEAE] rounded-[10px] focus:outline-none"
                 onChange={changeHandler}
+                {...props}
             />
         </label>
     )

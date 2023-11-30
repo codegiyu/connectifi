@@ -8,6 +8,7 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicy";
 import CartPage from "./pages/CartPage";
 import { ToastContainer } from "react-toastify";
 import CheckoutPage from "./pages/CheckoutPage";
+import ScheduleInstallation from "./pages/ScheduleInstallationPage";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/schedule-installation" element={<ScheduleInstallation />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

@@ -9,6 +9,7 @@ import Cta from "../sections/Cta";
 import GoToTop from "../hooks/GoToTop";
 import WhyChooseUs from "../sections/HomePage/WhyChooseUs";
 import Team from "../sections/HomePage/Team";
+import Demo from "../sections/HomePage/Demo";
 
 const HomePage = () => {
 
@@ -39,6 +40,7 @@ const HomePage = () => {
                     />
                 </section>
                 <Reviews />
+                <Demo />
                 <Team />
                 <Cta />
             </>
