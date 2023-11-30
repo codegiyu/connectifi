@@ -139,3 +139,34 @@ export const services = [
         text: "We're here to assist you all the way, dependable deliveries everywhere"
     },
 ]
+
+export const availableTimesArr = [
+    {
+        text: "10:00 AM",
+        value: "10:00 AM"
+    },
+    {
+        text: "11:00 AM",
+        value: "11:00 AM"
+    },
+    {
+        text: "12:00 AM",
+        value: "12:00 AM"
+    },
+    {
+        text: "1:00 PM",
+        value: "1:00 PM"
+    },
+    {
+        text: "2:00 PM",
+        value: "2:00 PM"
+    },
+    {
+        text: "3:00 PM",
+        value: "3:00 PM"
+    },
+    {
+        text: "4:00 PM",
+        value: "4:00 PM"
+    },
+]

@@ -6,6 +6,7 @@ import DealOfTheDay from "../sections/Products/DealOfTheDay";
 import Services from "../sections/Products/Services";
 import Cta from "../sections/Cta";
 import HeroNoImage from "../components/HeroNoImage";
+import BookInstallation from "../sections/Products/BookInstallation";
 
 const { products } = heroData;
 
@@ -22,6 +23,7 @@ const ProductsPage = () => (
             <DealOfTheDay />
             <BestDeals />
             <Services />
+            <BookInstallation />
             <Cta />
         </>
     </MainLayout>

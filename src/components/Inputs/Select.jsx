@@ -21,6 +21,7 @@ const Select = ({
     mouseLeaveHandler,
     disabled = false,
     errMsg = "",
+    required = false,
     ...props
 }) => {
 
@@ -119,6 +120,8 @@ const Select = ({
         <label 
             ref={selectWrapRef}
             className={`select-wrap ${errMsg ? "error" : ""} ${isFocused ? "is-focused" : ""} ${disabled ? "is-disabled" : ""} ${isHovered ? "is-hovered" : ""}`}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
         >
             {label ? (
                 <span className="select-label" style={labelStyles}>
@@ -144,11 +147,10 @@ const Select = ({
                         disabled={disabled}
                         style={inputStyles}
                         onChange={(e) => {changeHandler ? changeHandler(e) : null}}
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
-                        tabIndex={-1}
+                        required={required}
+                        // tabIndex={-1}
                         {...props}
                     >
                         <option value="" disabled></option>
@@ -218,6 +220,7 @@ Select.propTypes = {
     mouseLeaveHandler: PropTypes.func,
     disabled: PropTypes.bool,
     errMsg: PropTypes.string,
+    required: PropTypes.bool,
 }
 
 export default Select;

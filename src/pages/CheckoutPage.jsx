@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import dotsLoading from "../assets/three-dots-loading.svg";
 import arrowRight from "../assets/blue-arrow.svg";
 import OrderConfirmedModal from "../sections/OrderConfirmedModal";
+import GoToTop from "../hooks/GoToTop";
 
 
 const CheckoutPage = () => {
@@ -318,6 +319,7 @@ const CheckoutPage = () => {
                     </div>
                 </section>
                 <AuthLayout />
+                <GoToTop />
             </main>
         </div>
     )
