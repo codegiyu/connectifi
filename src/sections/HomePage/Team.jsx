@@ -4,7 +4,7 @@ import TeamCard from "../../components/TeamCard";
 const Team = () => {
 
     return (
-        <section className="p-container grid gap-16 pt-[2.25rem]">
+        <section className="p-container grid gap-16 pt-[6.25rem]">
             <div className="grid gap-4 text-center">
                 <h3 className="w-full text-dark-19 heading-3 md:heading-2-bold text-center">
                     Meet Our Team

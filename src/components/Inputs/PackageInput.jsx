@@ -4,7 +4,7 @@ const PackageInput = ({ label, name, value, type = "text", changeHandler, placeh
 
     return (
         <label className="w-full grid gap-2">
-            <span className="body-text-6 md:body-text-5 leading-5 text-white">
+            <span className="body-text-4 md:body-text-2 leading-5 text-white">
                 {label}
             </span>
             <input
@@ -12,7 +12,7 @@ const PackageInput = ({ label, name, value, type = "text", changeHandler, placeh
                 value={value}
                 type={type}
                 placeholder={placeholder}
-                className="w-full px-[12px] py-[16.75px] rounded bg-[#DAE9F2] body-text-7 md:body-text-6 placeholder:text-grey-89 text-[#3F3F3F] focus:outline-none"
+                className="w-full px-[12px] py-[16.75px] rounded bg-[#DAE9F2] body-text-5 md:body-text-3 placeholder:text-grey-89 text-[#3F3F3F] focus:outline-none"
                 onChange={changeHandler}
             />
         </label>
