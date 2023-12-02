@@ -20,6 +20,7 @@ const ScheduleInstallation = () => {
                 <OrderConfirmedModal 
                     orderConfirmedModalActive={orderConfirmedModalActive} 
                     setOrderConfirmedModalActive={setOrderConfirmedModalActive} 
+                    withOptions={false}
                 />
                 <section className="w-full bg-white pt-20 pb-[3.125rem] px-0 lg:px-16 rounded-[20px] shadow-service">
                     <ScheduleInstallationForm 

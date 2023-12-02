@@ -124,12 +124,12 @@ const Select = ({
             onBlur={handleBlur}
         >
             {label ? (
-                <span className="select-label" style={labelStyles}>
+                <span className={`${inBundle ? "bundle-select-label" : "select-label"}`} style={labelStyles}>
                     {label}
                 </span>
             ) : null
             }
-            <div className="select" tabIndex={1}>
+            <div className={`${inBundle ? "bundle-select" : "select"}`} tabIndex={1}>
                 <div className={`header ${borders ? "has-borders" : ""} ${inBundle ? "in-bundle" : ""}`} ref={selectRef} onClick={handleClick}>
                     <span className={`select-text ${value ? "" : "placeholder"}`}>
                         {optionsArray.find((item) => item.value == value)?.text || placeholder}

@@ -1,7 +1,7 @@
 
 const Demo = () => (
-    <section className="p-container bg-white py-14">
-        <section className="w-full grid gap-[4rem] items-center">
+    <section className=" bg-white py-14">
+        <section className="p-container grid gap-[4rem] items-center">
             <div className="w-full lg:max-w-max mx-auto grid gap-[1.875rem]">
                 <h3 className="w-full lg:w-max text-dark-19 heading-3 font-semibold md:heading-2 text-center">
                     Product Demo
@@ -12,7 +12,7 @@ const Demo = () => (
             </div>
             <div className="mx-auto w-full max-w-4xl aspect-video">
                 <iframe 
-                    src="https://www.youtube.com/embed/qhAbytaiaHY" 
+                    src="https://www.youtube.com/embed/FwPoA3z9Fb0" 
                     title="Connectifi Demo" 
                     width={"100%"}
                     height={"100%"}
